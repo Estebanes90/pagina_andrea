@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Recursos Musicales - Andrea Fusco</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style_elegante.css" />
+</head>
+<body class="bg-[#f0f6ff] text-gray-800">
+
+  <!-- NAVBAR dinámico -->
+  <div id="navbar-placeholder"></div>
+
+
+  <main class="max-w-6xl mx-auto py-12 px-6">
+    <h2 class="text-3xl font-semibold mb-8 text-blue-900 border-b pb-2">Biblioteca de Recursos</h2>
+    <p class="mb-6 text-gray-700">Aquí podés encontrar arreglos, partituras y repertorios seleccionados para estudio, difusión y práctica.</p>
+
+    <!-- Tarjetas de recursos -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+      <!-- Card 1 -->
+      <div class="group bg-white rounded-lg shadow-md p-4 cursor-pointer hover:shadow-lg transition" onclick="toggleLista('argentina')">
+        <h3 class="text-xl font-bold text-blue-800 mb-2">🎶 Música Argentina</h3>
+        <ul id="argentina" class="hidden pl-4 list-disc text-sm text-blue-700">
+          <li><a href="assets/recursos/vidala_catamarquena.pdf" target="_blank" class="underline">Vidala Catamarqueña (PDF)</a></li>
+          <li><a href="assets/recursos/zamba_del_laurel.pdf" target="_blank" class="underline">Zamba del Laurel (PDF)</a></li>
+        </ul>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="group bg-white rounded-lg shadow-md p-4 cursor-pointer hover:shadow-lg transition" onclick="toggleLista('coral')">
+        <h3 class="text-xl font-bold text-blue-800 mb-2">🎼 Música Coral</h3>
+        <ul id="coral" class="hidden pl-4 list-disc text-sm text-blue-700">
+          <li><a href="assets/recursos/gaudeamus.pdf" target="_blank" class="underline">Gaudeamus Igitur (PDF)</a></li>
+          <li><a href="assets/recursos/himno_coros.pdf" target="_blank" class="underline">Himno para Coros Juveniles (PDF)</a></li>
+        </ul>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="group bg-white rounded-lg shadow-md p-4 cursor-pointer hover:shadow-lg transition" onclick="toggleLista('orquesta')">
+        <h3 class="text-xl font-bold text-blue-800 mb-2">🎻 Música para Orquesta Juvenil</h3>
+        <ul id="orquesta" class="hidden pl-4 list-disc text-sm text-blue-700">
+          <li><a href="assets/recursos/suite_infantil.pdf" target="_blank" class="underline">Suite Infantil (PDF)</a></li>
+          <li><a href="assets/recursos/canon.pdf" target="_blank" class="underline">Canon en Re (PDF)</a></li>
+        </ul>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="group bg-white rounded-lg shadow-md p-4 cursor-pointer hover:shadow-lg transition" onclick="toggleLista('repertorio')">
+        <h3 class="text-xl font-bold text-blue-800 mb-2">📘 Repertorio Oficial</h3>
+        <ul id="repertorio" class="hidden pl-4 list-disc text-sm text-blue-700">
+          <li><a href="assets/recursos/repertorio_oficial_2024.pdf" target="_blank" class="underline">Repertorio Oficial 2024 (PDF)</a></li>
+          <li><a href="assets/recursos/programa_anual.pdf" target="_blank" class="underline">Programa Anual (PDF)</a></li>
+        </ul>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER dinámico -->
+  <div id="footer-placeholder"></div>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+  <script>
+    function toggleLista(id) {
+      document.querySelectorAll("ul[id]").forEach(ul => {
+        if (ul.id === id) {
+          ul.classList.toggle("hidden");
+        } else {
+          ul.classList.add("hidden");
+        }
+      });
+    }
+  </script>
+</body>
+</html>

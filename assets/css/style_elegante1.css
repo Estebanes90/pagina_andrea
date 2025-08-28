@@ -1,0 +1,91 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Tangerine&display=swap');
+
+body {
+  background-color: #f0f6ff;
+  color: #1a202c;
+}
+
+
+footer {
+  background-color: #0a2540 !important; /* azul oscuro */
+  color: #e2e8f0 !important;
+}
+
+.logo-af {
+  font-family: 'Tangerine', serif;
+  font-size: 50px;
+  text-shadow: 4px 4px 4px #aaa;
+  color: #e2e8f0;
+  letter-spacing: 3px;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.nav-link {
+  color: #e2e8f0;
+  text-decoration: none;
+}
+
+.nav-link.active {
+  background-color: #2563eb;
+  font-weight: 600;
+  box-shadow: 0 0 10px rgba(37, 99, 235, 0.4);
+}
+
+#mobile-menu ul {
+  text-align: center;
+}
+
+#mobile-menu a {
+  justify-content: center;
+  text-align: center;
+}
+
+/* Carrusel */
+.carousel {
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+  position: relative;
+}
+
+.carousel-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: none;
+}
+
+.carousel-image.active {
+  display: block;
+}
+
+.carousel button {
+  font-size: 2rem;
+  color: #1a202c;
+  background-color: rgba(255, 255, 255, 0.7);
+  border: none;
+  border-radius: 9999px;
+  padding: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+
+.carousel button:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .logo-af {
+    font-size: 1.4rem;
+  }
+  .carousel {
+    height: 220px;
+  }
+}

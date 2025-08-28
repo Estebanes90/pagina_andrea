@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="assets/images/logo.png" type="image/png" />
+  <title>Recursos Musicales - Andrea Fusco</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style_elegante.css" />
+  <link rel="stylesheet" href="assets/css/recursos.css" />
+</head>
+<body class="bg-[#f0f6ff] text-gray-800">
+
+  <!-- NAVBAR dinámico -->
+  <div id="navbar-placeholder"></div>
+
+  <main class="max-w-6xl mx-auto py-12 px-6">
+    <h2 class="text-3xl font-semibold mb-8 text-blue-900 border-b pb-2">Biblioteca de Recursos</h2>
+    <p class="mb-6 text-gray-700">Aquí podés encontrar arreglos, partituras y repertorios seleccionados para estudio, difusión y práctica.</p>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+
+      <!-- Tarjeta 1: Música Argentina -->
+      <div class="recurso-card group" onclick="toggleLista('argentina')">
+        <h3 class="recurso-title">🎶 Música Argentina</h3>
+        <ul id="argentina" class="recurso-lista hidden">
+          <li><a href="assets/recursos/MÚSICA_ARGENTINA/A-Merceditas-Antunia.pdf" target="_blank" class="recurso-link"> A Merceditas Antunia (PDF)</a></li>
+          <li><a href="assets/recursos/MÚSICA_ARGENTINA/Amy-Robsart_final_Acto_II.pdf" target="_blank" class="recurso-link">Amy Robsart final Acto II (PDF)</a></li>
+          <li><a href="assets/recursos/MÚSICA_ARGENTINA/Cancion-de-la-comparsa_Los-Negros_(1869).pdf" target="_blank" class="recurso-link">Cancion de la comparsa "Los Negros" 1869 (PDF)</a></li>
+          <li><a href="assets/recursos/MÚSICA_ARGENTINA/Casella-E-M_Caminito-de-la-pena.pdf" target="_blank" class="recurso-link">Casella Enrique Mario - Caminito de la pena (PDF)</a></li>
+          <li><a href="assets/recursos/MÚSICA_ARGENTINA/Casella-E-M_Cancion-de-cuna.pdf" target="_blank" class="recurso-link">Casella Enrique Mario - Canción de cuna (PDF)</a></li>
+          <li><a href="assets/recursos/MÚSICA_ARGENTINA/Casella-E-M_Cuatro-canciones-calchaquies_No.2.pdf" target="_blank" class="recurso-link">Casella Enrique Mario - Cuatro Canciones Calchaquíes - Nº 2 (PDF)</a></li>
+          <li><a href="assets/recursos/MÚSICA_ARGENTINA/Casella-E-M_Palomita-y-vidala.pdf" target="_blank" class="recurso-link"> Casella Enrique Mario - Palomita y Vidala (PDF)</a></li>
+          <li><a href="assets/recursos/MÚSICA_ARGENTINA/Casella-E-M_Vidalita-tucumana.pdf" target="_blank" class="recurso-link"> Casella Enrique Mario - Vidalita tucumana (PDF)</a></li>
+          <li><a href="assets/recursos/MÚSICA_ARGENTINA/Danza_Op.35.pdf" target="_blank" class="recurso-link"> PRELUDIO y DANZA(2015)II - Danza(PDF)</a></li>
+          <li><a href="assets/recursos/MÚSICA_ARGENTINA/Deseo.pdf" target="_blank" class="recurso-link"> DESEO (1939) Para flauta traversa (PDF)</a></li>
+          <li><a href="assets/recursos/MÚSICA_ARGENTINA/Dos-canciones_Op.22.pdf" target="_blank" class="recurso-link"> LA PENA - Dos Canciones Poesía y Música de ALBERTO WILLIAMS (PDF)</a></li>
+          <li><a href="assets/recursos/MÚSICA_ARGENTINA/Dos-melodias_Op.31_(Drangosch).pdf" target="_blank" class="recurso-link"> DOS MELODÍAS (1923) para canto y piano (u orquesta) No.l: En la Ribera (PDF)</a></li>
+          <li><a href="assets/recursos/MÚSICA_ARGENTINA/Egloga.pdf" target="_blank" class="recurso-link"> ÉGLOGA para dos flautas (1953) (PDF)</a></li>
+          <li><a href="assets/recursos/MÚSICA_ARGENTINA/El-manto-magico_Acto_III_Cancion-de-cuna.pdf" target="_blank" class="recurso-link"> El Manto Mágico ACTO III Canción de Cuna (PDF)</a></li>
+          <li><a href="assets/recursos/MÚSICA_ARGENTINA/Elegia_(1994).pdf" target="_blank" class="recurso-link"> Elegía para cuarteto de guitarras (1994) (PDF)</a></li>
+          <li><a href="assets/recursos/MÚSICA_ARGENTINA/GRAU_Sonata-espaniola_no.1.pdf" target="_blank" class="recurso-link"> GRAU - Sonata española - Nº 1 (PDF)</a></li>
+          <li><a href="assets/recursos/MÚSICA_ARGENTINA/GRAU_Sonata-espaniola_no.2.pdf" target="_blank" class="recurso-link"> GRAU - Sonata española - Nº 2 (PDF)</a></li>
+          <li><a href="assets/recursos/MÚSICA_ARGENTINA/GRAU_Sonata-espaniola_no.3.pdf" target="_blank" class="recurso-link"> GRAU - Sonata española - Nº 3 (PDF)</a></li>
+          <li><a href="assets/recursos/MÚSICA_ARGENTINA/La-Isla.pdf" target="_blank" class="recurso-link">Soledad - ÁNGEL E. LASALA & ORFILA BARDESIO (PDF)</a></li>
+          <li><a href="assets/recursos/MÚSICA_ARGENTINA/Lydie.pdf" target="_blank" class="recurso-link"> Lydie (PDF)</a></li>
+          <li><a href="assets/recursos/MÚSICA_ARGENTINA/Milonga-del-arbol_(transc.-Anido).pdf" target="_blank" class="recurso-link"> Milonga del árbol (PDF)</a></li>
+          <li><a href="assets/recursos/MÚSICA_ARGENTINA/Op.31_no.4.pdf" target="_blank" class="recurso-link"> Seis Canciones Simples - Qué zapatitos me pongo? (1998) Op.31 no.4 (PDF)</a></li>
+          <li><a href="assets/recursos/MÚSICA_ARGENTINA/Op.31_no.5.pdf" target="_blank" class="recurso-link"> Seis Canciones Simples No.5: Es el alba una sombra (1996) (PDF)</a></li>
+          <li><a href="assets/recursos/MÚSICA_ARGENTINA/Op.31_no.6.pdf" target="_blank" class="recurso-link"> Seis Canciones Simples No.6: Soñé que tú me llevabas (1996) (PDF)</a></li>
+          <li><a href="assets/recursos/MÚSICA_ARGENTINA/Plaintive-tourterelle.pdf" target="_blank" class="recurso-link"> Plaintive tourterelle (PDF)</a></li>
+          <li><a href="assets/recursos/MÚSICA_ARGENTINA/Preludio_Op.35.pdf" target="_blank" class="recurso-link"> PRELUDIO y DANZA (2015) I - Preludio (PDF)</a></li>
+          <li><a href="assets/recursos/MÚSICA_ARGENTINA/Romance-Melodico.pdf" target="_blank" class="recurso-link"> Romance Melódico (PDF)</a></li>
+          <li><a href="assets/recursos/MÚSICA_ARGENTINA/Romanza-de-Lia_Acto_III.pdf" target="_blank" class="recurso-link"> Romanza de Lia Acto III (PDF)</a></li>
+          <li><a href="assets/recursos/MÚSICA_ARGENTINA/Romanza-de-Roberto_Acto_III.pdf" target="_blank" class="recurso-link"> Romanza de Roberto Acto III (PDF)</a></li>
+          <li><a href="assets/recursos/MÚSICA_ARGENTINA/Si-me-esta-negado-el-amor.pdf" target="_blank" class="recurso-link"> Si me esta negado el amor (PDF)</a></li>
+          <li><a href="assets/recursos/MÚSICA_ARGENTINA/Sonata_I_(I.-Villoud).pdf" target="_blank" class="recurso-link"> Sonata I - (I.-Villoud) (PDF)</a></li>
+          <li><a href="assets/recursos/MÚSICA_ARGENTINA/Sonata_II_(I.-Villoud).pdf" target="_blank" class="recurso-link"> Sonata II (I.-Villoud) (PDF)</a></li>
+          <li><a href="assets/recursos/MÚSICA_ARGENTINA/Sonata_III_(I.-Villoud).pdf" target="_blank" class="recurso-link"> Sonata III (I.-Villoud) (PDF)</a></li>
+          <li><a href="assets/recursos/MÚSICA_ARGENTINA/Violin_I_(I.-Villoud).pdf" target="_blank" class="recurso-link"> Violin I (I.-Villoud) (PDF)</a></li>
+          <li><a href="assets/recursos/MÚSICA_ARGENTINA/Violin_II_(I.-Villoud).pdf" target="_blank" class="recurso-link"> Violin II (I.-Villoud) (PDF)</a></li>      
+          <li><a href="assets/recursos/MÚSICA_ARGENTINA/Violin_III_(I.-Villoud).pdf" target="_blank" class="recurso-link"> Violin_III_(I.-Villoud) (PDF)</a></li>
+        </ul>
+      </div>
+
+      <!-- Tarjeta 2: Música Coral -->
+      <div class="recurso-card group" onclick="toggleLista('coral')">
+        <h3 class="recurso-title">🎼 Música Coral</h3>
+        <div id="coral" class="hidden">
+
+          <div class="recurso-subseccion">
+            <h4 class="recurso-subtitulo">1 - Partituras</h4>
+            <ul class="recurso-lista">
+                <li><a href="assets/recursos/MÚSICA_CORAL/GAUDEAMUS-IGITUR.pdf" target="_blank" class="recurso-link">Gaudeamus Igitur (PDF)</a></li>
+                <li><a href="assets/recursos/MÚSICA_CORAL/himno_coros.pdf" target="_blank" class="recurso-link">Himno para Coros Juveniles (PDF)</a></li>
+                <li><a href="assets/recursos/MÚSICA_CORAL/Viento-vicentico.pdf" target="_blank" class="recurso-link">Viento de Vicentico (PDF)</a></li>
+                <li><a href="assets/recursos/MÚSICA_CORAL/ukuthula.pdf" target="_blank" class="recurso-link">Ukuthula (PDF)</a></li>
+                <li><a href="assets/recursos/MÚSICA_CORAL/Zamba-por-vos.pdf" target="_blank" class="recurso-link">Zamba por vos (PDF)</a></li>
+                <li><a href="assets/recursos/MÚSICA_CORAL/panis-angelicus.pdf" target="_blank" class="recurso-link">Panis Angelicus de Cesar Franck (PDF)</a></li>
+                <li><a href="assets/recursos/MÚSICA_CORAL/GAUDEAMUS-IGITUR.pdf" target="_blank" class="recurso-link">Gaudeamus Igitur en Sib (PDF)</a></li>
+                <li><a href="assets/recursos/MÚSICA_CORAL/Buenos-Aires-Hora-Cero-Piazzolla.pdf" target="_blank" class="recurso-link">Buenos Aires hora cero - Piazzolla VC: Zadoff (PDF)</a></li>
+                <li><a href="assets/recursos/MÚSICA_CORAL/FANTASÍA-COMPLETO-Chico-Buarque.pdf" target="_blank" class="recurso-link">Fantasía - Chico Buarque (PDF)</a></li>
+                <li><a href="assets/recursos/MÚSICA_CORAL/Los-cacharros-Marta-Ariño.jpg" target="_blank" class="recurso-link">Los cacharros (PDF)</a></li>
+                <li><a href="assets/recursos/MÚSICA_CORAL/Ave-Maria-G.Caccini.pdf" target="_blank" class="recurso-link">Ave María - Caccini (PDF)</a></li>
+                <li><a href="assets/recursos/MÚSICA_CORAL/Ave-Maria-by-Bach-Gounod-guitarra.pdf" target="_blank" class="recurso-link">Ave María Bach - Gounod acompañamiento guitarra (PDF)</a></li>
+                <li><a href="assets/recursos/MÚSICA_CORAL/ave-maria-bach-gounod-en-FA.pdf" target="_blank" class="recurso-link">Ave María Bach - Gounod (PDF)</a></li>
+                <li><a href="assets/recursos/MÚSICA_CORAL/son-de-camaguey.pdf.pdf" target="_blank" class="recurso-link">Son de Camagüey (PDF)</a></li>
+                <li><a href="assets/recursos/MÚSICA_CORAL/el_vito-popular-andaluz.pdf" target="_blank" class="recurso-link">Con el Vito - Popular andaluz (PDF)</a></li>
+                <li><a href="assets/recursos/MÚSICA_CORAL/Chacarera-de-las-piedras-Atahualpa-Yupanqui-Roberto-Goldar.pdf" target="_blank" class="recurso-link">Chacarera de las piedras - VC: Roberto Goldar (PDF)</a></li>
+                <li><a href="assets/recursos/MÚSICA_CORAL/AZABACHE.pdf" target="_blank" class="recurso-link">Azabache VC MC Aguilar (PDF)</a></li>
+                <li><a href="assets/recursos/MÚSICA_CORAL/oh-happy-day-primera-parte.pdf" target="_blank" class="recurso-link">Oh Happy day - Primera parte (PDF)</a></li>
+                <li><a href="assets/recursos/MÚSICA_CORAL/linamorato-gastoldi.pdf" target="_blank" class="recurso-link">El enamorado - Falala de Gastoldi (PDF)</a></li>
+                <li><a href="assets/recursos/MÚSICA_CORAL/El-grillo-Josquin-Des-Prez.pdf" target="_blank" class="recurso-link">El grillo - Josquin Des Prez (PDF)</a></li>
+                <li><a href="assets/recursos/MÚSICA_CORAL/Kyrie-Dante-Andreo.pdf" target="_blank" class="recurso-link">Kyrie - Misa Breve - Dante Andreo (PDF)</a></li>
+                <li><a href="assets/recursos/MÚSICA_CORAL/louva-a-deus-vocal-sin-percu.pdf" target="_blank" class="recurso-link">Loua a Deus (PDF)</a></li>
+                <li><a href="assets/recursos/MÚSICA_CORAL/O_Holy_Night_Full_Score.pdf" target="_blank" class="recurso-link">O Holy Night (PDF)</a></li>
+                <li><a href="assets/recursos/MÚSICA_CORAL/LA-PEREGRINACION-A-la-huella-ArielRamirez.pdf" target="_blank" class="recurso-link">La Peregrinación - A la Huella - Ariel Ramirez (PDF)</a></li>
+                <li><a href="assets/recursos/MÚSICA_CORAL/signore_delle_cime.pdf" target="_blank" class="recurso-link">Signore delle cime - Marzi (PDF)</a></li>
+                <li><a href="assets/recursos/MÚSICA_CORAL/el-rio-vuelve.pdf" target="_blank" class="recurso-link">El río vuelve (PDF)</a></li>
+                <li><a href="assets/recursos/MÚSICA_CORAL/ZONA-DE-PROMESAS-Coro--1-.pdf" target="_blank" class="recurso-link">Cerati zona de promesas (PDF)</a></li>
+                <li><a href="assets/recursos/MÚSICA_CORAL/FUERZA-NATURAL-coro.pdf" target="_blank" class="recurso-link">Cerati fuerza natural (PDF)</a></li>
+                <li><a href="assets/recursos/MÚSICA_CORAL/CACTUS-coro.pdf" target="_blank" class="recurso-link">Cerati cactus (PDF)</a></li>
+                <li><a href="assets/recursos/MÚSICA_CORAL/HOMBRE-AL-AGUA-coro.pdf" target="_blank" class="recurso-link">Cerati hombre al agua (PDF)</a></li>
+                <li><a href="assets/recursos/MÚSICA_CORAL/PUENTE-coro.pdf" target="_blank" class="recurso-link">Cerati Puente (PDF)</a></li>
+                <li><a href="assets/recursos/MÚSICA_CORAL/PASEO-INMORAL-coro.pdf" target="_blank" class="recurso-link">Cerati Paseo inmoral (PDF)</a></li>
+                <li><a href="assets/recursos/MÚSICA_CORAL/Seguirviviendosintuamor-spineta.pdf" target="_blank" class="recurso-link">Seguir viviendo sin tu amor (PDF)</a></li>
+                <li><a href="assets/recursos/MÚSICA_CORAL/Agua-de-Beber.pdf" target="_blank" class="recurso-link">Agua de beber (PDF)</a></li>
+                <li><a href="assets/recursos/MÚSICA_CORAL/Candombe-Mulato-chanal.pdf" target="_blank" class="recurso-link">Candombe Mulato (PDF)</a></li>
+                <li><a href="assets/recursos/MÚSICA_CORAL/rumba.pdf" target="_blank" class="recurso-link">Rumba (Rita) (PDF)</a></li>
+                <li><a href="assets/recursos/MÚSICA_CORAL/la-sachapera.pdf" target="_blank" class="recurso-link">La Sachapera (PDF)</a></li>
+                <li><a href="assets/recursos/MÚSICA_CORAL/Agua_y_sol_del_parana_Ariel-Ramirez.pdf" target="_blank" class="recurso-link">Agua y sol del Paraná - Ariel Ramírez (PDF)</a></li>
+                <li><a href="assets/recursos/MÚSICA_CORAL/Nostalgia.pdf" target="_blank" class="recurso-link">Nostalagia (Tango) - Enrique Cadícamo (PDF)</a></li>
+                <li><a href="assets/recursos/MÚSICA_CORAL/Moliendo_Cafe.pdf" target="_blank" class="recurso-link">Moliendo Café - Hugo Blanco (PDF)</a></li>
+                <li><a href="assets/recursos/MÚSICA_CORAL/Trabajo-en-las-vinias-satbb.pdf" target="_blank" class="recurso-link">Trabajo en las viñas - Jorge Sosa (PDF)</a></li>
+                <li><a href="assets/recursos/MÚSICA_CORAL/juanito_marquez/montuno_juanito_marquez_en_re.pdf" target="_blank" class="recurso-link">El son Montuno - Juanito Marquez en RE (PDF)</a></li>
+                <li><a href="assets/recursos/MÚSICA_CORAL/Mozart_k220/mozart_k220_Kyrie.pdf" target="_blank" class="recurso-link">Mozart k220 - Kyrie (PDF)</a></li>
+                <li><a href="assets/recursos/MÚSICA_CORAL/Mozart_k220/mozart_k220_Gloria.pdf" target="_blank" class="recurso-link">Mozart k220 - Gloria (PDF)</a></li>
+                <li><a href="assets/recursos/MÚSICA_CORAL/Mozart_k220/mozart_k220_Credo.pdf" target="_blank" class="recurso-link">Mozart k220 - Credo (PDF)</a></li>
+                <li><a href="assets/recursos/MÚSICA_CORAL/Mozart_k220/mozart_k220_Sanctus.pdf" target="_blank" class="recurso-link">Mozart k220 - Sanctus (PDF)</a></li>
+                <li><a href="assets/recursos/MÚSICA_CORAL/Mozart_k220/mozart_k220_Benedictus.pdf" target="_blank" class="recurso-link">Mozart k220 - Benedictus (PDF)</a></li>
+                <li><a href="assets/recursos/MÚSICA_CORAL/Mozart_k220/mozart_k220_Agnus_Dei.pdf" target="_blank" class="recurso-link">Mozart k220 - Agnus Dei (PDF)</a></li>
+                <li><a href="assets/recursos/MÚSICA_CORAL/Mozart_k220/mozart_k220_Completa.pdf" target="_blank" class="recurso-link">Mozart k220 - Completa (PDF)</a></li>
+            </ul>
+          </div>
+
+          <div class="recurso-subseccion">
+            <h4 class="recurso-subtitulo">2 - Audios / Videos</h4>
+            <ul class="recurso-lista">
+              <li><a href="https://www.youtube.com/watch?v=35C7N-psrMg" target="_blank" rel="noopener noreferrer" class="recurso-link">» Hallelujah - sopranos only - sólo sopranos</a></li>
+			  <li><a href="https://www.youtube.com/watch?v=Jwaxc95MXV4" target="_blank" rel="noopener noreferrer" class="recurso-link">» Hallelujah - no sopranos - todo menos sopranos</a></li>
+			  <li><a href="https://www.youtube.com/watch?v=QMFW0pT5tbY" target="_blank" rel="noopener noreferrer" class="recurso-link">» Hallelujah - altos only - sólo contraltos</a></li>
+			  <li><a href="https://www.youtube.com/watch?v=xm0CnumNfhI" target="_blank" rel="noopener noreferrer" class="recurso-link">» Hallelujah - no altos - todo menos contraltos</a></li>
+			  <li><a href="https://www.youtube.com/watch?v=xakqy9L5lh0" target="_blank" rel="noopener noreferrer" class="recurso-link">» Hallelujah - tenors only - sólo tenores</a></li>
+			  <li><a href="https://www.youtube.com/watch?v=rENqpyTWo58" target="_blank" rel="noopener noreferrer" class="recurso-link">» Hallelujah - no tenors - todo menos tenores</a></li>
+			  <li><a href="https://www.youtube.com/watch?v=KgEthMjqB_4" target="_blank" rel="noopener noreferrer" class="recurso-link">» Hallelujah - basses only - sólo bajos</a></li>
+			  <li><a href="https://www.youtube.com/watch?v=zh55vJsQ2Jk" target="_blank" rel="noopener noreferrer" class="recurso-link">» Hallelujah - no basses - todo menos bajos</a></li>
+			  <li><a href="https://www.youtube.com/watch?v=1J7-DJIA1FY" target="_blank" rel="noopener noreferrer" class="recurso-link">» Hallelujah - orchestra only - sólo orquesta</a></li>  
+            </ul>
+          </div>
+
+          <div class="recurso-subseccion">
+            <h4 class="recurso-subtitulo">3 - MIDIS</h4>
+            <ul class="recurso-lista">
+              <li><a href="assets/recursos/midis/voz_soprano.mid" download class="recurso-link">Voz Soprano (MIDI)</a></li>
+              <li><a href="assets/recursos/midis/acompanamiento.mid" download class="recurso-link">Acompañamiento Armónico (MIDI)</a></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Tarjeta 3: Orquesta Juvenil -->
+      <div class="recurso-card group" onclick="toggleLista('orquesta')">
+        <h3 class="recurso-title">🏋️ Música para Orquesta Juvenil</h3>
+        <ul id="orquesta" class="recurso-lista hidden">
+          <li><a href="assets/recursos/suite_infantil.pdf" target="_blank" class="recurso-link">Suite Infantil (PDF)</a></li>
+          <li><a href="assets/recursos/canon.pdf" target="_blank" class="recurso-link">Canon en Re (PDF)</a></li>
+        </ul>
+      </div>
+
+      <!-- Tarjeta 4: Repertorio Oficial -->
+      <div class="recurso-card group" onclick="toggleLista('repertorio')">
+        <h3 class="recurso-title">📘 Repertorio Oficial</h3>
+        <ul id="repertorio" class="recurso-lista hidden">
+          <li><a href="assets/recursos/repertorio_oficial_2024.pdf" target="_blank" class="recurso-link">Repertorio Oficial 2024 (PDF)</a></li>
+          <li><a href="assets/recursos/programa_anual.pdf" target="_blank" class="recurso-link">Programa Anual (PDF)</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- FOOTER dinámico -->
+  <div id="footer-placeholder"></div>
+
+  <script src="script.js"></script>
+  <script>
+    function toggleLista(id) {
+      document.querySelectorAll(".recurso-card > ul, .recurso-card > div").forEach(el => {
+        if (el.id === id) {
+          el.classList.toggle("hidden");
+        } else {
+          el.classList.add("hidden");
+        }
+      });
+    }
+  </script>
+</body>
+</html>

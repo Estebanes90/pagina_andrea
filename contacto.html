@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contacto – Andrea Fusco</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style_elegante.css" />
+</head>
+<body class="bg-[#f0f6ff] text-gray-800">
+
+  <!-- Navbar dinámico -->
+  <div id="navbar-placeholder"></div>
+
+  <main class="max-w-3xl mx-auto py-12 px-6">
+    <h2 class="text-3xl font-semibold mb-6 text-blue-900 border-b border-gray-400 pb-2 text-center shadow-md transition duration-300 hover:shadow-lg">
+  Contacto
+</h2>
+
+    <p class="text-center text-lg text-gray-700 mb-8">
+      Entablemos un diálogo. Utilice este medio para contactarse con <strong>Andrea Fusco</strong>, solicitar información de cualquier tipo respecto al contenido de este sitio.
+    </p>
+
+    <!-- Formulario -->
+    <div class="bg-white shadow-lg rounded-lg p-6">
+      <form action="https://formspree.io/f/your-form-id" method="POST" class="space-y-4">
+        <div class="grid md:grid-cols-2 gap-4">
+          <div>
+            <label for="name" class="block text-sm font-medium text-gray-700">Nombre y Apellido</label>
+            <input type="text" id="name" name="name" required
+              class="w-full border rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400" />
+          </div>
+          <div>
+            <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+            <input type="email" id="email" name="_replyto" required
+              class="w-full border rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400" />
+          </div>
+        </div>
+
+        <div>
+          <label for="subject" class="block text-sm font-medium text-gray-700">Asunto</label>
+          <input type="text" id="subject" name="subject"
+            class="w-full border rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400" />
+        </div>
+
+        <div>
+          <label for="message" class="block text-sm font-medium text-gray-700">Mensaje</label>
+          <textarea id="message" name="message" rows="5" required
+            class="w-full border rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"></textarea>
+        </div>
+
+        <button type="submit"
+          class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition">Enviar mensaje</button>
+      </form>
+    </div>
+  </main>
+
+  <!-- Footer dinámico -->
+  <div id="footer-placeholder"></div>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prensa - Andrea Fusco</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style_elegante.css" />
+</head>
+<body class="bg-[#f0f6ff] text-gray-800">
+  <!-- Navbar -->
+  <div id="navbar-placeholder"></div>
+
+  <main class="max-w-6xl mx-auto py-12 px-6">
+    <h2 class="text-3xl font-semibold mb-8 text-blue-900 border-b pb-2">Prensa & Blog</h2>
+
+    <!-- Filtros -->
+    <div class="flex flex-wrap items-center gap-4 mb-8">
+      <select id="filtro-año" class="border rounded px-3 py-2 text-sm">
+        <option value="">Todos los años</option>
+        <option value="2025">2025</option>
+        <option value="2024">2024</option>
+      </select>
+      <select id="filtro-tipo" class="border rounded px-3 py-2 text-sm">
+        <option value="">Todas las categorías</option>
+        <option value="entrevista">Entrevistas</option>
+        <option value="concierto">Conciertos</option>
+        <option value="articulo">Artículos</option>
+      </select>
+      <select id="filtro-orden" class="border rounded px-3 py-2 text-sm">
+        <option value="desc">Más recientes primero</option>
+        <option value="asc">Más antiguas primero</option>
+      </select>
+    </div>
+
+    <!-- Contenedor de notas en columnas -->
+    <div id="contenedor-notas" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+
+    <!-- Paginación -->
+    <div id="paginacion" class="mt-10 flex justify-center gap-2"></div>
+  </main>
+
+  <!-- Footer -->
+  <div id="footer-placeholder"></div>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+  <script>
+  const notas = [
+    {
+      titulo: "Publicación en Revista ANTEC - Bases del Nacionalismo Musical en la Argentina - segunda parte",
+      fecha: "Junio de 2024",
+      tipo: "articulo",
+      resumen: "En esta segunda parte se abordan analíticamente obras orquestales representativas de cada grupo. Allí se estudia de qué manera los compositores integraron o no y en qué grado, elementos del nacionalismo y la música orquestal de la época.",
+      imagen: "assets/images/revista-antec.jpg",
+      enlace: "https://www.researchgate.net/publication/383163920_Bases_del_nacionalismo_musical_en_la_Argentina_2da_parte"
+    },
+    {
+      titulo: "Concierto Italiano",
+      fecha: "Junio de 2024",
+      tipo: "concierto",
+      resumen: "Concierto realizado el 8 de junio de 2024, semana italianidad. Orquesta Sinfónica de la Provincia de Corrientes. Solista: Francisco Flaschka",
+      imagen: "assets/images/revista-antec.jpg",
+      enlace: "https://www.researchgate.net/publication/383163920_Bases_del_nacionalismo_musical_en_la_Argentina_2da_parte"
+    },
+    {
+      titulo: "Reflejos de actividad",
+      fecha: "2025-06-24",
+      tipo: "concierto",
+      resumen: "Andrea Fusco coordinó conciertos educativos para jóvenes talentos...",
+      imagen: "assets/images/concierto1.jpg",
+      enlace: "#"
+    },
+    {
+      titulo: "Entrevista en TV",
+      fecha: "2025-05-12",
+      tipo: "entrevista",
+      resumen: "Reflexión sobre la música coral en la educación...",
+      imagen: "assets/images/concierto2.jpg",
+      enlace: "#"
+    },
+    {
+      titulo: "Reflejos de actividad",
+      fecha: "24-06-2025",
+      tipo: "concierto",
+      resumen: "Andrea Fusco coordinó conciertos educativos para jóvenes talentos...",
+      imagen: "assets/images/concierto1.jpg",
+      enlace: "notas/reflejos-de-actividad.html" // ← NUEVO: apunta a archivo local
+    }
+  ];
+
+  const contenedorNotas = document.getElementById("contenedor-notas");
+  const paginacion = document.getElementById("paginacion");
+  const filtroAno = document.getElementById("filtro-año");
+  const filtroTipo = document.getElementById("filtro-tipo");
+  const filtroOrden = document.getElementById("filtro-orden");
+
+  let paginaActual = 1;
+  const notasPorPagina = 6;
+
+  function extraerAnio(fecha) {
+    if (fecha.includes("-")) {
+      const partes = fecha.split("-");
+      return partes[2]; // dd-mm-yyyy
+    }
+    const match = fecha.match(/\d{4}$/);
+    return match ? match[0] : null;
+  }
+
+  function parseFecha(fecha) {
+    // dd-mm-yyyy
+    if (/^\d{2}-\d{2}-\d{4}$/.test(fecha)) {
+      const [d, m, y] = fecha.split("-");
+      return `${y}-${m}-${d}`;
+    }
+    // cualquier texto con año al final
+    const match = fecha.match(/\d{4}$/);
+    return match ? `${match[0]}-01-01` : "1900-01-01";
+  }
+
+  function cargarAniosUnicos() {
+    const años = notas
+      .map(n => extraerAnio(n.fecha))
+      .filter(a => a)
+      .filter((año, index, self) => self.indexOf(año) === index)
+      .sort((a, b) => b - a);
+
+    filtroAno.innerHTML = '<option value="">Todos los años</option>';
+    años.forEach(año => {
+      const opt = document.createElement("option");
+      opt.value = año;
+      opt.textContent = año;
+      filtroAno.appendChild(opt);
+    });
+  }
+
+  function filtrarNotas() {
+    const ano = filtroAno.value;
+    const tipo = filtroTipo.value;
+
+    return notas.filter(nota => {
+      const añoExtraido = extraerAnio(nota.fecha);
+      return (!ano || añoExtraido === ano) && (!tipo || nota.tipo === tipo);
+    });
+  }
+
+  function ordenarNotas(lista) {
+    const orden = filtroOrden.value;
+    return lista.sort((a, b) => {
+      const fechaA = new Date(parseFecha(a.fecha));
+      const fechaB = new Date(parseFecha(b.fecha));
+      return orden === "asc" ? fechaA - fechaB : fechaB - fechaA;
+    });
+  }
+
+  function mostrarNotas() {
+    const notasFiltradas = ordenarNotas(filtrarNotas());
+    const totalPaginas = Math.ceil(notasFiltradas.length / notasPorPagina);
+    const inicio = (paginaActual - 1) * notasPorPagina;
+    const pagNotas = notasFiltradas.slice(inicio, inicio + notasPorPagina);
+
+    contenedorNotas.innerHTML = pagNotas.map(nota => `
+      <article class="bg-white rounded-lg shadow-md overflow-hidden transform transition-transform duration-300 hover:scale-105">
+        <img src="${nota.imagen}" alt="${nota.titulo}" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h3 class="text-xl font-bold text-blue-800 mb-1">${nota.titulo}</h3>
+          <p class="text-sm text-gray-500 mb-1">${nota.fecha}</p>
+          <p class="text-gray-700 text-sm mb-3">${nota.resumen}</p>
+          <a href="${nota.enlace}" class="text-blue-600 hover:underline text-sm">Leer más →</a>
+        </div>
+      </article>
+    `).join("");
+
+    paginacion.innerHTML = "";
+    for (let i = 1; i <= totalPaginas; i++) {
+      const btn = document.createElement("button");
+      btn.textContent = i;
+      btn.className = `px-3 py-1 rounded ${i === paginaActual ? 'bg-blue-600 text-white' : 'bg-white border text-blue-600'}`;
+      btn.onclick = () => { paginaActual = i; mostrarNotas(); };
+      paginacion.appendChild(btn);
+    }
+  }
+
+  // Inicializar
+  cargarAniosUnicos();
+  filtroAno.onchange = () => { paginaActual = 1; mostrarNotas(); };
+  filtroTipo.onchange = () => { paginaActual = 1; mostrarNotas(); };
+  filtroOrden.onchange = () => { paginaActual = 1; mostrarNotas(); };
+  mostrarNotas();
+</script>
+</body>
+</html>
