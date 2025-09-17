@@ -42,25 +42,68 @@ header .logo-af {
   align-items: center;
 }
 
-/* Navbar activo */
+/* ===== NAVBAR LINKS ===== */
+/*.nav-link {
+  position: relative; /* Necesario para que funcione el subrayado */
+  /*color: white;
+  transition: color 0.3s ease;
+}*/
+
+
+.nav-link {
+  color: #ffffff; /* Texto blanco */
+  background: none; /* Sin fondo */
+  padding: 0.5rem 1rem;
+  border-radius: 0;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+  position: relative;
+}
+
+
+/* Hover: línea elegante debajo */
+.nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  left: 50%;
+  bottom: 0;
+  background-color: #60a5fa; /* azul claro (Tailwind blue-400) */
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.nav-link:hover::after {
+  width: 100%; /* Se expande al hover */
+}
+
+/* Color en hover */
+.nav-link:hover {
+  color: #d1d5db; /* gris claro */
+}
+
+/* Página activa */
 .nav-link.active {
-  background-color: #3b82f6;
-  color: white;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  color: #60a5fa; /* Azul claro para indicar página actual */
   font-weight: 600;
 }
 
-.nav-link {
-  display: inline-block;
-  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  transform-origin: center center;
+.nav-link.active::after {
+  content: "";
+  position: absolute;
+  width: 100%;   /* siempre subrayado */
+  height: 2px;
+  left: 50%;
+  bottom: 0;
+  background-color: #60a5fa; /* Azul claro */
+  transform: translateX(-50%);
 }
 
 /* Carrusel */
 .carousel {
   max-width: 1200px;
-  margin: 6 auto;
-  height: 400px;
+  margin: 1.5rem auto;
+  height: 600px;
   overflow: hidden;
   border-radius: 0.5rem;
   box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);

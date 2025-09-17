@@ -28,7 +28,8 @@ document.addEventListener("DOMContentLoaded", () => {
       navLinks.forEach(link => {
         const linkHref = link.getAttribute("href");
         if (linkHref === currentPage || linkHref === "./" + currentPage || linkHref === "../" + currentPage) {
-          link.classList.add("bg-blue-300", "shadow", "rounded-lg", "font-semibold");
+          link.classList.add("active");
+          /*link.classList.add("bg-blue-300", "shadow", "rounded-lg", "font-semibold");*/
         }
       });
 
