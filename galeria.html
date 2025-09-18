@@ -1,164 +1,156 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Galería - Andrea Fusco</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/css/style_elegante.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Galería - Andrea Fusco</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/style_elegante.css" />
 </head>
 
 <body class="bg-[#f0f6ff] text-gray-800">
-  <!-- Navbar dinámico -->
-  <div id="navbar-placeholder"></div>
+    <div id="navbar-placeholder"></div>
 
-  <main class="max-w-6xl mx-auto py-12 px-6">
-    <h2 class="text-3xl font-semibold mb-8 text-blue-900 border-b pb-2">Galería</h2>
+    <main class="max-w-6xl mx-auto py-12 px-6">
+        <h2 class="text-3xl font-semibold mb-8 text-blue-900 border-b pb-2">Galería</h2>
 
-    <!-- Álbumes -->
-    <div class="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
-      <!-- Álbum 1: Ensayos -->
-      <div class="album-card group cursor-pointer" onclick="toggleAlbum('ensayos')">
-        <img src="assets/images/ensayos_portada.jpg" alt="Ensayos" class="rounded-lg shadow-lg group-hover:scale-105 transition duration-300">
-        <h3 class="text-center text-blue-800 font-bold mt-2">Ensayos</h3>
-      </div>
+        <div class="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
+            <div class="album-card group cursor-pointer relative overflow-hidden rounded-lg shadow-lg" onclick="toggleAlbum('ensayos')">
+                <img src="assets/images/ensayo_portada.jpg" alt="Ensayos" class="w-full h-full object-cover rounded-lg group-hover:scale-105 transition duration-300">
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-70 group-hover:opacity-80 transition duration-300"></div>
+                <h3 class="absolute bottom-4 left-4 text-white text-xl font-bold">Ensayos</h3>
+            </div>
 
-      <!-- Álbum 2: Conciertos -->
-      <div class="album-card group cursor-pointer" onclick="toggleAlbum('conciertos')">
-        <img src="assets/images/conciertos_portada.jpg" alt="Conciertos" class="rounded-lg shadow-lg group-hover:scale-105 transition duration-300">
-        <h3 class="text-center text-blue-800 font-bold mt-2">Conciertos</h3>
-      </div>
+            <div class="album-card group cursor-pointer relative overflow-hidden rounded-lg shadow-lg" onclick="toggleAlbum('conciertos')">
+                <img src="assets/images/carrusel11.jpg" alt="Conciertos" class="w-full h-full object-cover rounded-lg group-hover:scale-105 transition duration-300">
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-70 group-hover:opacity-80 transition duration-300"></div>
+                <h3 class="absolute bottom-4 left-4 text-white text-xl font-bold">Conciertos</h3>
+            </div>
 
-      <!-- Álbum 3: Coro -->
-      <div class="album-card group cursor-pointer" onclick="toggleAlbum('coro')">
-        <img src="assets/images/coro_portada.jpg" alt="Coro" class="rounded-lg shadow-lg group-hover:scale-105 transition duration-300">
-        <h3 class="text-center text-blue-800 font-bold mt-2">Coro</h3>
-      </div>
+            <div class="album-card group cursor-pointer relative overflow-hidden rounded-lg shadow-lg" onclick="toggleAlbum('coro')">
+                <img src="assets/images/coro_portada.jpeg" alt="Coro" class="w-full h-full object-cover rounded-lg group-hover:scale-105 transition duration-300">
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-70 group-hover:opacity-80 transition duration-300"></div>
+                <h3 class="absolute bottom-4 left-4 text-white text-xl font-bold">Coro</h3>
+            </div>
 
-      <!-- Álbum 4: Orquesta -->
-      <div class="album-card group cursor-pointer" onclick="toggleAlbum('orquesta')">
-        <img src="assets/images/orquesta_portada.jpg" alt="Orquesta" class="rounded-lg shadow-lg group-hover:scale-105 transition duration-300">
-        <h3 class="text-center text-blue-800 font-bold mt-2">Orquesta</h3>
-      </div>
+            <div class="album-card group cursor-pointer relative overflow-hidden rounded-lg shadow-lg" onclick="toggleAlbum('orquesta')">
+                <img src="assets/images/orquesta_portada.jpg" alt="Orquesta" class="w-full h-full object-cover rounded-lg group-hover:scale-105 transition duration-300">
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-70 group-hover:opacity-80 transition duration-300"></div>
+                <h3 class="absolute bottom-4 left-4 text-white text-xl font-bold">Orquesta</h3>
+            </div>
 
-      <!-- Álbum 5: Videos -->
-      <div class="album-card group cursor-pointer" onclick="toggleAlbum('videos')">
-        <img src="assets/images/videos_portada.jpg" alt="Videos" class="rounded-lg shadow-lg group-hover:scale-105 transition duration-300">
-        <h3 class="text-center text-blue-800 font-bold mt-2">Videos</h3>
-      </div>
-    </div>
+            <div class="album-card group cursor-pointer relative overflow-hidden rounded-lg shadow-lg" onclick="toggleAlbum('videos')">
+                <img src="assets/images/videos_portada.jpg" alt="Videos" class="w-full h-full object-cover rounded-lg group-hover:scale-105 transition duration-300">
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-70 group-hover:opacity-80 transition duration-300"></div>
+                <h3 class="absolute bottom-4 left-4 text-white text-xl font-bold">Videos</h3>
+            </div>
+        </div>
 
-    <!-- Contenido desplegable -->
-    <section id="ensayos" class="hidden mt-10">
-      <h4 class="text-2xl font-bold text-blue-700 mb-4">Ensayos</h4>
-      <div class="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
-        <img src="assets/images/ensayo1.jpg" class="rounded shadow">
-        <img src="assets/images/ensayo2.jpg" class="rounded shadow">
-        <img src="assets/images/ensayo3.jpg" class="rounded shadow">
-      </div>
-    </section>
+        <section id="ensayos" class="hidden mt-10">
+            <h4 class="text-2xl font-bold text-blue-700 mb-4">Ensayos</h4>
+            <div class="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
+                <img src="assets/images/ensayo1.jpg" class="rounded shadow">
+                <img src="assets/images/ensayo2.jpg" class="rounded shadow">
+                <img src="assets/images/ensayo3.jpg" class="rounded shadow">
+            </div>
+        </section>
 
-    <section id="conciertos" class="hidden mt-10">
-  	<h4 class="text-2xl font-bold text-blue-700 mb-4">Conciertos</h4>
+        <section id="conciertos" class="hidden mt-10">
+            <h4 class="text-2xl font-bold text-blue-700 mb-4">Conciertos</h4>
 
-  	<!-- Subálbumes -->
-  	<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-  	  <!-- Subálbum 1 -->
-   	 <div class="group cursor-pointer" onclick="toggleSubalbum('concierto_colon')">
-    	  <img src="assets/images/colon_portada.jpg" alt="Teatro Colón" class="rounded-lg shadow-lg group-hover:scale-105 transition duration-300">
-     	 <h5 class="text-center font-semibold text-blue-800 mt-2">Teatro Colón</h5>
-   	 </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                <div class="group cursor-pointer relative overflow-hidden rounded-lg shadow-lg" onclick="toggleSubalbum('concierto_colon')">
+                    <img src="assets/images/colon_portada.jpg" alt="Teatro Colón" class="w-full h-full object-cover rounded-lg group-hover:scale-105 transition duration-300">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-70 group-hover:opacity-80 transition duration-300"></div>
+                    <h5 class="absolute bottom-4 left-4 text-white text-lg font-bold">Teatro Colón</h5>
+                </div>
 
- 	   <!-- Subálbum 2 -->
- 	  <div class="group cursor-pointer" onclick="toggleSubalbum('concierto_homenaje')">
- 	     <img src="assets/images/homenaje_portada.jpg" alt="Homenaje 2023" class="rounded-lg shadow-lg group-hover:scale-105 transition duration-300">
-    	  <h5 class="text-center font-semibold text-blue-800 mt-2">Homenaje 2023</h5>
-   	 </div>
-	  </div>
+                <div class="group cursor-pointer relative overflow-hidden rounded-lg shadow-lg" onclick="toggleSubalbum('concierto_homenaje')">
+                    <img src="assets/images/homenaje_portada.jpg" alt="Homenaje 2023" class="w-full h-full object-cover rounded-lg group-hover:scale-105 transition duration-300">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-70 group-hover:opacity-80 transition duration-300"></div>
+                    <h5 class="absolute bottom-4 left-4 text-white text-lg font-bold">Homenaje 2023</h5>
+                </div>
+            </div>
 
- 	 <!-- Contenido de subálbumes -->
- 	 <div id="concierto_colon" class="hidden mt-6">
- 	   <h6 class="text-lg font-bold text-blue-600 mb-2">📍 Concierto Teatro Colón</h6>
-  	  <div class="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
-      	<img src="assets/images/colon1.jpg" class="rounded shadow">
-     	 <img src="assets/images/colon2.jpg" class="rounded shadow">
-     	 <img src="assets/images/colon3.jpg" class="rounded shadow">
-   	 </div>
- 	 </div>
+            <div id="concierto_colon" class="hidden mt-6">
+                <h6 class="text-lg font-bold text-blue-600 mb-2">📍 Concierto Teatro Colón</h6>
+                <div class="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
+                    <img src="assets/images/colon1.jpg" class="rounded shadow">
+                    <img src="assets/images/colon2.jpg" class="rounded shadow">
+                    <img src="assets/images/colon3.jpg" class="rounded shadow">
+                </div>
+            </div>
 
-  		<div id="concierto_homenaje" class="hidden mt-6">
-   		 <h6 class="text-lg font-bold text-blue-600 mb-2">📍 Concierto Homenaje 2023</h6>
-   		 <div class="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
-    		   <img src="assets/images/homenaje1.jpg" class="rounded shadow">
-     		   <img src="assets/images/homenaje2.jpg" class="rounded shadow">
-      		   <img src="assets/images/homenaje3.jpg" class="rounded shadow">
-    		</div>
-  	       </div>
-	</section>
+            <div id="concierto_homenaje" class="hidden mt-6">
+                <h6 class="text-lg font-bold text-blue-600 mb-2">📍 Concierto Homenaje 2023</h6>
+                <div class="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
+                    <img src="assets/images/homenaje1.jpg" class="rounded shadow">
+                    <img src="assets/images/homenaje2.jpg" class="rounded shadow">
+                    <img src="assets/images/homenaje3.jpg" class="rounded shadow">
+                </div>
+            </div>
+        </section>
 
 
-    <section id="coro" class="hidden mt-10">
-      <h4 class="text-2xl font-bold text-blue-700 mb-4">Coro</h4>
-      <div class="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
-        <img src="assets/images/coro1.jpg" class="rounded shadow">
-        <img src="assets/images/coro2.jpg" class="rounded shadow">
-        <img src="assets/images/coro3.jpg" class="rounded shadow">
-      </div>
-    </section>
+        <section id="coro" class="hidden mt-10">
+            <h4 class="text-2xl font-bold text-blue-700 mb-4">Coro</h4>
+            <div class="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
+                <img src="assets/images/coro1.jpg" class="rounded shadow">
+                <img src="assets/images/coro2.jpg" class="rounded shadow">
+                <img src="assets/images/coro3.jpg" class="rounded shadow">
+            </div>
+        </section>
 
-    <section id="orquesta" class="hidden mt-10">
-      <h4 class="text-2xl font-bold text-blue-700 mb-4">Orquesta</h4>
-      <div class="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
-        <img src="assets/images/orquesta1.jpg" class="rounded shadow">
-        <img src="assets/images/orquesta2.jpg" class="rounded shadow">
-        <img src="assets/images/orquesta3.jpg" class="rounded shadow">
-      </div>
-    </section>
+        <section id="orquesta" class="hidden mt-10">
+            <h4 class="text-2xl font-bold text-blue-700 mb-4">Orquesta</h4>
+            <div class="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
+                <img src="assets/images/orquesta1.jpg" class="rounded shadow">
+                <img src="assets/images/orquesta2.jpg" class="rounded shadow">
+                <img src="assets/images/orquesta3.jpg" class="rounded shadow">
+            </div>
+        </section>
 
-    <section id="videos" class="hidden mt-10">
-      <h4 class="text-2xl font-bold text-blue-700 mb-4">Videos</h4>
-      <div class="grid gap-4 grid-cols-1 sm:grid-cols-2">
-        <iframe src="https://www.youtube.com/embed/VIDEO_ID_1" class="w-full h-64 rounded shadow"></iframe>
-        <iframe src="https://www.youtube.com/embed/VIDEO_ID_2" class="w-full h-64 rounded shadow"></iframe>
-      </div>
-    </section>
+        <section id="videos" class="hidden mt-10">
+            <h4 class="text-2xl font-bold text-blue-700 mb-4">Videos</h4>
+            <div class="grid gap-4 grid-cols-1 sm:grid-cols-2">
+                <iframe src="https://youtu.be/4y9CLTIvNJk?si=4JVSYW93jL9hSsQV" class="w-full h-64 rounded shadow"></iframe>
+                <iframe src="https://youtu.be/7_j0oQpt1HA?si=1JB076mDJ-gi0muc" class="w-full h-64 rounded shadow"></iframe>
+            </div>
+        </section>
 
-  </main>
+    </main>
 
-  <!-- Footer dinámico -->
-  <div id="footer-placeholder"></div>
+    <div id="footer-placeholder"></div>
 
-  <!-- Script para cargar navbar y footer -->
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 
-  <!-- Script para mostrar álbumes -->
-  <script>
-    function toggleAlbum(id) {
-      document.querySelectorAll('main section[id]').forEach(sec => {
-        if (sec.id === id) {
-          sec.classList.toggle('hidden');
-        } else {
-          sec.classList.add('hidden');
+    <script>
+        function toggleAlbum(id) {
+            document.querySelectorAll('main section[id]').forEach(sec => {
+                if (sec.id === id) {
+                    sec.classList.toggle('hidden');
+                } else {
+                    sec.classList.add('hidden');
+                }
+            });
+            window.scrollTo({ top: document.getElementById(id).offsetTop - 100, behavior: 'smooth' });
         }
-      });
-      window.scrollTo({ top: document.getElementById(id).offsetTop - 100, behavior: 'smooth' });
-    }
-   function toggleSubalbum(id) {
-    document.querySelectorAll('#conciertos > div[id]').forEach(sec => {
-      if (sec.id === id) {
-        sec.classList.toggle('hidden');
-      } else {
-        sec.classList.add('hidden');
-      }
-    });
-   const target = document.getElementById(id);
-   if (target) {
-     window.scrollTo({
-       top: target.offsetTop - 80,
-       behavior: "smooth"
-     });
-   }
-  }
-  </script>
+        function toggleSubalbum(id) {
+            document.querySelectorAll('#conciertos > div[id]').forEach(sec => {
+                if (sec.id === id) {
+                    sec.classList.toggle('hidden');
+                } else {
+                    sec.classList.add('hidden');
+                }
+            });
+            const target = document.getElementById(id);
+            if (target) {
+                window.scrollTo({
+                    top: target.offsetTop - 80,
+                    behavior: "smooth"
+                });
+            }
+        }
+    </script>
 </body>
 </html>
