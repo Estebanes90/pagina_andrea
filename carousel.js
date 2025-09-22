@@ -113,6 +113,6 @@ document.addEventListener("DOMContentLoaded", function () {
   if (nextBtn) nextBtn.addEventListener("click", nextSlide);
   if (prevBtn) prevBtn.addEventListener("click", prevSlide);
 
-  // Cambio automático cada 4 segundos
-  setInterval(nextSlide, 4000);
+  // Cambio automático cada 6 segundos
+  setInterval(nextSlide, 6000);
 });

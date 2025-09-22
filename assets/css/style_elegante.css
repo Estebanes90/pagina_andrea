@@ -286,7 +286,7 @@ header .logo-af {
 /* Texto sobre las imágenes */
 .carousel-caption {
   position: absolute;
-  bottom: 15%;
+  bottom: 10%;
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
