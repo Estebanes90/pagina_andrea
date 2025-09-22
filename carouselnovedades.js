@@ -1,33 +1,119 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const track = document.querySelector('.carousel-track');
-    if (!track) return; // Salir si el elemento no existe
+  const track = document.querySelector('.carousel-track');
+  if (!track) return;
 
-    const cards = Array.from(track.children);
-    const cardWidth = cards[0].offsetWidth + (parseFloat(getComputedStyle(cards[0]).marginRight) * 2);
-    let scrollPosition = 0;
+  const cards = Array.from(track.children);
+  const cardStyle = getComputedStyle(cards[0]);
+  const cardMargin = parseFloat(cardStyle.marginRight) + parseFloat(cardStyle.marginLeft);
+  const cardWidth = cards[0].offsetWidth + cardMargin;
 
-    // Duplicar las tarjetas para crear el efecto infinito
-    cards.forEach(card => {
-        const clone = card.cloneNode(true);
-        track.appendChild(clone);
+  // Duplicar tarjetas para loop infinito
+  cards.forEach(card => {
+    const clone = card.cloneNode(true);
+    track.appendChild(clone);
+  });
+
+  let scrollPosition = 0;
+  let carouselInterval;
+  let isPaused = false; // indica si el carrusel está pausado por "Seguir leyendo"
+
+  function startCarousel() {
+    if (carouselInterval) return;
+    track.style.transition = 'transform 0.05s linear';
+    carouselInterval = setInterval(() => {
+      scrollPosition += 1;
+      track.style.transform = `translateX(-${scrollPosition}px)`;
+
+      if (scrollPosition >= cardWidth * cards.length) {
+        track.style.transition = 'none';
+        scrollPosition = 0;
+        track.style.transform = `translateX(0)`;
+        setTimeout(() => {
+          track.style.transition = 'transform 0.05s linear';
+        }, 20);
+      }
+    }, 15);
+  }
+
+  function stopCarousel() {
+    clearInterval(carouselInterval);
+    carouselInterval = null;
+  }
+
+  startCarousel();
+
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+
+  function moveNext() {
+    scrollPosition += cardWidth;
+    track.style.transition = 'transform 0.5s ease-in-out';
+    track.style.transform = `translateX(-${scrollPosition}px)`;
+    if (!carouselInterval && !isPaused) startCarousel();
+  }
+
+  function movePrev() {
+    scrollPosition -= cardWidth;
+    if (scrollPosition < 0) scrollPosition = cardWidth * cards.length;
+    track.style.transition = 'transform 0.5s ease-in-out';
+    track.style.transform = `translateX(-${scrollPosition}px)`;
+    if (!carouselInterval && !isPaused) startCarousel();
+  }
+
+  nextBtn.addEventListener('click', () => {
+    moveNext();
+    closeAllCards(); // cerrar tarjetas abiertas al usar botones
+  });
+
+  prevBtn.addEventListener('click', () => {
+    movePrev();
+    closeAllCards(); // cerrar tarjetas abiertas al usar botones
+  });
+
+  // Toggle "Seguir leyendo"
+  track.querySelectorAll('.carousel-card').forEach(card => {
+    const button = card.querySelector('.toggle-text');
+    const preview = card.querySelector('.preview-text');
+    const full = card.querySelector('.full-text');
+
+    button.addEventListener('click', (e) => {
+      e.stopPropagation();
+      isPaused = true; // pausamos el carrusel
+      stopCarousel();
+
+      if (full.style.display === 'none' || full.style.display === '') {
+        full.style.display = 'flex';
+        preview.style.display = 'none';
+        button.textContent = 'Mostrar menos';
+      } else {
+        full.style.display = 'none';
+        preview.style.display = 'block';
+        button.textContent = 'Seguir leyendo';
+      }
     });
+  });
 
-    function startCarousel() {
-        setInterval(() => {
-            scrollPosition += cardWidth;
-            track.style.transform = `translateX(-${scrollPosition}px)`;
+  // Función para cerrar todas las tarjetas abiertas
+  function closeAllCards() {
+    track.querySelectorAll('.carousel-card').forEach(card => {
+      const preview = card.querySelector('.preview-text');
+      const full = card.querySelector('.full-text');
+      const button = card.querySelector('.toggle-text');
 
-            // Si llegamos a la mitad del carrusel (donde están las copias), reiniciamos la posición
-            if (scrollPosition >= cardWidth * cards.length) {
-                scrollPosition = 0;
-                track.style.transition = 'none'; // Desactivar la transición para el reinicio
-                track.style.transform = `translateX(-${scrollPosition}px)`;
-                setTimeout(() => {
-                    track.style.transition = 'transform 0.5s ease-in-out'; // Reactivar la transición
-                }, 10);
-            }
-        }, 3000); // El carrusel se mueve cada 3 segundos
+      if (full.style.display === 'flex') {
+        full.style.display = 'none';
+        preview.style.display = 'block';
+        button.textContent = 'Seguir leyendo';
+      }
+    });
+  }
+
+  // Clic fuera de tarjetas para reactivar carrusel y cerrar tarjetas
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.carousel-card')) {
+      closeAllCards();
+      isPaused = false;
+      startCarousel();
     }
-
-    startCarousel();
+  });
 });

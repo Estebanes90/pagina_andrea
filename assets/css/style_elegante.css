@@ -45,14 +45,6 @@ header .logo-af {
   align-items: center;
 }
 
-/* ===== NAVBAR LINKS ===== */
-/*.nav-link {
-  position: relative; /* Necesario para que funcione el subrayado */
-  /*color: white;
-  transition: color 0.3s ease;
-}*/
-
-
 .nav-link {
   color: #ffffff; /* Texto blanco */
   background: none; /* Sin fondo */
