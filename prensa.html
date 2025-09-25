@@ -12,7 +12,8 @@
   <div id="navbar-placeholder"></div>
 
   <main class="max-w-6xl mx-auto py-12 px-6">
-    <h2 class="text-3xl font-semibold mb-8 text-blue-900 border-b pb-2">Prensa & Blog</h2>
+    <h2 class="text-3xl font-semibold mb-6 text-blue-900 border-b border-gray-400 pb-2 text-center shadow-md transition duration-300 hover:shadow-lg">
+        Prensa</h2>
 
     <!-- Filtros -->
     <div class="flex flex-wrap items-center gap-4 mb-8">
@@ -20,12 +21,14 @@
         <option value="">Todos los años</option>
         <option value="2025">2025</option>
         <option value="2024">2024</option>
+        <option value="2024">2023</option>
       </select>
       <select id="filtro-tipo" class="border rounded px-3 py-2 text-sm">
         <option value="">Todas las categorías</option>
         <option value="entrevista">Entrevistas</option>
         <option value="concierto">Conciertos</option>
         <option value="articulo">Artículos</option>
+        <option value="noticia">Noticias</option>
       </select>
       <select id="filtro-orden" class="border rounded px-3 py-2 text-sm">
         <option value="desc">Más recientes primero</option>
@@ -48,7 +51,15 @@
   <script>
   const notas = [
     {
-      titulo: "Publicación en Revista ANTEC - Bases del Nacionalismo Musical en la Argentina - segunda parte",
+      titulo: "Publicación en Revista ANTEC Vol 7 N°2- Bases del Nacionalismo Musical en la Argentina",
+      fecha: "Diciembre de 2023",
+      tipo: "articulo",
+      resumen: "Basado en las investigaciones realizadas para el doctorado, este artículo es una introducción al estudio realizado aplicado a la música orquestal argentina, entre fines del siglo XIX y primera mitad del XX.",
+      imagen: "assets/images/revista-antec.jpg",
+      enlace: "https://www.researchgate.net/publication/377907577_Bases_del_nacionalismo_musical_en_la_Argentina"
+    },
+    {
+      titulo: "Publicación en Revista ANTEC Vol 8 N° 1 - Bases del Nacionalismo Musical en la Argentina - segunda parte",
       fecha: "Junio de 2024",
       tipo: "articulo",
       resumen: "En esta segunda parte se abordan analíticamente obras orquestales representativas de cada grupo. Allí se estudia de qué manera los compositores integraron o no y en qué grado, elementos del nacionalismo y la música orquestal de la época.",
@@ -59,9 +70,9 @@
       titulo: "Concierto Italiano",
       fecha: "Junio de 2024",
       tipo: "concierto",
-      resumen: "Concierto realizado el 8 de junio de 2024, semana italianidad. Orquesta Sinfónica de la Provincia de Corrientes. Solista: Francisco Flaschka",
-      imagen: "assets/images/revista-antec.jpg",
-      enlace: "https://www.researchgate.net/publication/383163920_Bases_del_nacionalismo_musical_en_la_Argentina_2da_parte"
+      resumen: "El día 08 de junio en el salón de actos del Instituto Pio XIl de la ciudad de Corrientes se desarrolló, en el marco de la semana de la italianidad, el concierto “Italia ayer, hoy y siempre” organizado por el Instituto de cultura de esta ciudad.",
+      imagen: "assets/images/semana-italiana-sinfonica.jpeg",
+      enlace: "notas/conciertoitaliano.html"
     },
     {
       titulo: "Reflejos de actividad",
@@ -80,12 +91,12 @@
       enlace: "#"
     },
     {
-      titulo: "Reflejos de actividad",
-      fecha: "24-06-2025",
-      tipo: "concierto",
-      resumen: "Andrea Fusco coordinó conciertos educativos para jóvenes talentos...",
-      imagen: "assets/images/concierto1.jpg",
-      enlace: "notas/reflejos-de-actividad.html" // ← NUEVO: apunta a archivo local
+      titulo: "Andrea Fusco representa a Corrientes en la Orquesta Infantil Argentina",
+      fecha: "03-08-2023",
+      tipo: "noticia",
+      resumen: "La Orquesta Infantil Argentina es el encuentro nacional de 120 niñas, niños, jóvenes y líderes de todo el país, que eligen la música como instrumento de crecimiento personal y comunitario..",
+      imagen: "assets/images/orquestaInfantil.jpg",
+      enlace: "notas/noticia1.html" // ← NUEVO: apunta a archivo local
     }
   ];
 
@@ -161,12 +172,12 @@
 
     contenedorNotas.innerHTML = pagNotas.map(nota => `
       <article class="bg-white rounded-lg shadow-md overflow-hidden transform transition-transform duration-300 hover:scale-105">
-        <img src="${nota.imagen}" alt="${nota.titulo}" class="w-full h-48 object-cover">
+        <img src="${nota.imagen}" alt="${nota.titulo}" class="w-full h-55 object-contain">
         <div class="p-4">
           <h3 class="text-xl font-bold text-blue-800 mb-1">${nota.titulo}</h3>
           <p class="text-sm text-gray-500 mb-1">${nota.fecha}</p>
           <p class="text-gray-700 text-sm mb-3">${nota.resumen}</p>
-          <a href="${nota.enlace}" class="text-blue-600 hover:underline text-sm">Leer más →</a>
+          <a href="${nota.enlace}" class="text-blue-600 hover:underline text-sm">Ver más →</a>
         </div>
       </article>
     `).join("");

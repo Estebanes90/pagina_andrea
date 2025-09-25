@@ -43,6 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
 
+
   // Cargar footer
   fetch(basePath + "components/footer.html")
     .then(res => res.text())

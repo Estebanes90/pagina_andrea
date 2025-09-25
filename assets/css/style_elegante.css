@@ -142,7 +142,7 @@ header .logo-af {
 /* Responsive: móviles hasta 640px */
 @media (max-width: 640px) {
   .logo-af {
-    font-size: 1.4rem;
+    font-size: 1.8rem;
   }
 
   .carousel {
@@ -329,7 +329,7 @@ header .logo-af {
 }
 
 .carousel-dots button.active {
-  background: #333;
+  background: #f47915;
 }
 
 /* === Botones de cada slide === */
