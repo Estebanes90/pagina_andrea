@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
    <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /> -->
     <link rel="stylesheet" href="assets/css/style_elegante.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Alan+Sans:wght@400;600;700&display=swap" rel="stylesheet">
     
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -67,6 +68,7 @@
   <div class="carousel-images h-full">
     <div class="carousel-slide active">
       <img src="assets/images/carrusel1.jpg" alt="Andrea Fusco Dirigiendo" class="w-full h-full object-cover">
+      <div class="overlay"></div>
       <div class="carousel-caption">
         <h2>Maestra Andrea Fusco</h2>
         <p>Una vida dedicada a la dirección orquestal y coral</p>
@@ -77,6 +79,7 @@
     </div>
     <div class="carousel-slide">
       <img src="assets/images/carrusel2.jpg" alt="Presentación Internacional" class="w-full h-full object-cover">
+      <div class="overlay"></div>
       <div class="carousel-caption">
         <h2>Trayectoria y Experiencia Internacional</h2>
         <p>Formación en paises como Italia, Suiza, México y Bulgaria</p>
@@ -86,7 +89,8 @@
       </div>
     </div>
     <div class="carousel-slide">
-      <img src="assets/images/nuñes_camelino/Camelino_7.jpg" alt="Dirección Coral" class="w-full h-full object-cover">
+      <img src="assets/images/nuñez_camelino/Camelino-7.jpg" alt="Dirección Coral" class="w-full h-full object-cover">
+      <div class="overlay"></div>
       <div class="carousel-caption">
         <h2>Más de 20 años de experiencia</h2>
         <p>Formación, docencia, conciertos y liderazgo artístico</p>
@@ -97,6 +101,7 @@
     </div>
     <div class="carousel-slide">
       <img src="assets/images/andrea8.jpg" alt="Premios y Reconocimientos" class="w-full h-full object-cover">
+      <div class="overlay"></div>
       <div class="carousel-caption">
         <h2>Premios Internacionales</h2>
         <p>Reconocida por su excelencia artística</p>
@@ -329,7 +334,7 @@
 
         <!-- Tarjeta 3 -->
         <div class="carousel-card bg-white rounded-lg shadow-lg border border-gray-200 min-h-[320px] cursor-pointer flex flex-col">
-          <img src="assets/images/Patricia Sosa/saludo-final.webp" alt="Alquimia" class="w-full h-48 object-cover rounded-t-lg">
+          <img src="assets/images/Patricia Sosa/orquesta-patricia-sosa-29.jpg" alt="Alquimia" class="w-full h-48 object-cover rounded-t-lg">
           <div class="p-4 flex-1 flex flex-col">
             <h3 class="font-semibold text-lg mb-2">Patricia Sosa presentó "Alquimia" en el Teatro Vera a sala llena</h3>
             <div class="text-container flex-1 flex flex-col">
@@ -346,6 +351,7 @@
             <button class="mt-4 px-4 py-2 bg-primary text-white font-semibold rounded hover:bg-primary-dark toggle-text">Seguir leyendo</button>
           </div>
         </div>
+
 
         <!-- Tarjeta 4 -->
         <div class="carousel-card bg-white rounded-lg shadow-lg border border-gray-200 min-h-[320px] cursor-pointer flex flex-col">
@@ -376,120 +382,6 @@
     </button>
   </div>
 </section>
-
-
-<!-- CARRUSEL DE NOVEDADES -->
-<!-- <section id="novedades" class="relative py-12">
-    <div class="container mx-auto px-4">
-        <h2 class="text-3xl font-bold mb-4 text-center">Novedades</h2>
-        <h1 class="text-xl mb-8 text-center">En esta sección podrás encontrar las últimas novedades y presentaciones artísticas de Andrea.</h1>
-
-        <div class="flex items-center justify-center">
-
-            <div class="swiper-button-prev"></div>
-
-            <div class="swiper">
-                <div class="swiper-wrapper">
-
-                    <div class="swiper-slide carousel-card bg-white rounded-lg shadow-lg border border-gray-200 h-[500px] cursor-pointer flex flex-col">
-                        <div class="h-48 overflow-hidden">
-                            <img src="assets/images/renace-teatro.jpg" alt="Renace" class="w-full h-full object-cover rounded-t-lg">
-                        </div>
-                        <div class="p-4 flex-1 flex flex-col">
-                            <h3 class="font-semibold text-lg mb-2">“Renace” dejó abiertas las puertas del Teatro Oficial Juan de Vera</h3>
-                            <div class="text-container flex-1 flex flex-col min-h-[120px]">
-                                <p class="text-gray-700 text-sm preview-text line-clamp-5">
-                                    Un rol preponderante tuvo la Orquesta Sinfónica de la Provincia de Corrientes bajo dirección de la Maestra Andrea Fusco en la interpretación de los cuadros musicales en vivo. Con tres funciones de un espectáculo de primer nivel, “Renace” marca el punto de partida para una nueva etapa del Teatro Vera, un hecho cultural y artístico llevado adelante junto a la comunidad cultural local, que involucró a actores, bailarines, músicos, audiovisualistas, compositores, arreglistas, técnicos y productores, tanto de Corrientes como de otros puntos del país.
-                                </p>
-                                <div class="mt-2 full-text" style="display:none;">
-                                    <p class="text-gray-700 text-sm">
-                                        Un rol preponderante tuvo la Orquesta Sinfónica de la Provincia de Corrientes bajo dirección de la Maestra Andrea Fusco en la interpretación de los cuadros musicales en vivo. Con tres funciones de un espectáculo de primer nivel, “Renace” marca el punto de partida para una nueva etapa del Teatro Vera, un hecho cultural y artístico llevado adelante junto a la comunidad cultural local, que involucró a actores, bailarines, músicos, audiovisualistas, compositores, arreglistas, técnicos y productores, tanto de Corrientes como de otros puntos del país.
-                                    </p>
-                                    <a href="https://culturacorrientes.com/en-la-reapertura-del-teatro-oficial-juan-de-vera-valdes-pidio-que-sea-un-teatro-abierto-a-la-comunidad/" target="_blank" class="mt-2 inline-block text-blue-600 font-semibold hover:underline">
-                                        Ver más detalles →
-                                    </a>
-                                </div>
-                            </div>
-                            <button class="mt-4 px-4 py-2 bg-primary text-white font-semibold rounded hover:bg-primary-dark toggle-text">Seguir leyendo</button>
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide carousel-card bg-white rounded-lg shadow-lg border border-gray-200 h-[500px] cursor-pointer flex flex-col">
-                        <div class="h-48 overflow-hidden">
-                            <img src="assets/images/los-viajes-del-joven-wether.webp" alt="Los viajes del joven Werther" class="w-full h-full object-cover rounded-t-lg">
-                        </div>
-                        <div class="p-4 flex-1 flex flex-col">
-                            <h3 class="font-semibold text-lg mb-2">"Los viajes del joven Werther"</h3>
-                            <div class="text-container flex-1 flex flex-col min-h-[120px]">
-                                <p class="text-gray-700 text-sm preview-text line-clamp-5">
-                                    Concierto sinfónico interpretado por la Orquesta Sinfónica de la Provincia de Corrientes el día 6 de septiembre de 2025, como parte de una celebración del legado cultural alemán y del bicentenario de la inmigración alemana a la Argentina. El concierto también contó con la participación del tenor correntino Lisandro Palomo. Se interpretaron obras de Beethoven, Mendelssohn, Brahms y Tchaikovsky.
-                                </p>
-                                <div class="mt-2 full-text" style="display:none;">
-                                    <p class="text-gray-700 text-sm">
-                                        Concierto sinfónico interpretado por la Orquesta Sinfónica de la Provincia de Corrientes el día 6 de septiembre de 2025, como parte de una celebración del legado cultural alemán y del bicentenario de la inmigración alemana a la Argentina. El concierto también contó con la participación del tenor correntino Lisandro Palomo. Se interpretaron obras de Beethoven, Mendelssohn, Brahms y Tchaikovsky.
-                                    </p>
-                                    <a href="https://culturacorrientes.com/la-orquesta-sinfonica-brindara-el-concierto-los-viajes-del-joven-werther-en-el-teatro-vera-2/" target="_blank" class="mt-2 inline-block text-blue-600 font-semibold hover:underline">
-                                        Ver más detalles →
-                                    </a>
-                                </div>
-                            </div>
-                            <button class="mt-4 px-4 py-2 bg-primary text-white font-semibold rounded hover:bg-primary-dark toggle-text">Seguir leyendo</button>
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide carousel-card bg-white rounded-lg shadow-lg border border-gray-200 h-[500px] cursor-pointer flex flex-col">
-                        <div class="h-48 overflow-hidden">
-                            <img src="assets/images/Patricia Sosa/saludo-final.webp" alt="Alquimia" class="w-full h-full object-cover rounded-t-lg">
-                        </div>
-                        <div class="p-4 flex-1 flex flex-col">
-                            <h3 class="font-semibold text-lg mb-2">Patricia Sosa presentó "Alquimia" en el Teatro Vera a sala llena</h3>
-                            <div class="text-container flex-1 flex flex-col min-h-[120px]">
-                                <p class="text-gray-700 text-sm preview-text line-clamp-5">
-                                    El pasado 12 de Septiembre, la Orquesta Sinfónica de Corrientes fue la invitada de lujo a este espectáculo que forma parte de la gira nacional "Alquimia". Un remolino de emociones invadió cada rincón del Teatro Oficial Juan de Vera este viernes por la noche. La cantautora Patricia Sosa se presentó a sala llena y con un repertorio que viajó por todos los géneros musicales que forman parte de su carrera en más de 40 años.
-                                </p>
-                                <div class="mt-2 full-text" style="display:none;">
-                                    <p class="text-gray-700 text-sm">
-                                        El pasado 12 de Septiembre, la Orquesta Sinfónica de Corrientes fue la invitada de lujo a este espectáculo que forma parte de la gira nacional "Alquimia". Un remolino de emociones invadió cada rincón del Teatro Oficial Juan de Vera este viernes por la noche. La cantautora Patricia Sosa se presentó a sala llena y con un repertorio que viajó por todos los géneros musicales que forman parte de su carrera en más de 40 años.
-                                    </p>
-                                    <a href="https://www.diarioepoca.com/1362419-patricia-sosa-lloro-en-el-teatro-vera-y-emociono-a-sala-llena" target="_blank" class="mt-2 inline-block text-blue-600 font-semibold hover:underline">
-                                        Ver más detalles →
-                                    </a>
-                                </div>
-                            </div>
-                            <button class="mt-4 px-4 py-2 bg-primary text-white font-semibold rounded hover:bg-primary-dark toggle-text">Seguir leyendo</button>
-                        </div>
-                    </div>
-                    
-                    <div class="swiper-slide carousel-card bg-white rounded-lg shadow-lg border border-gray-200 h-[500px] cursor-pointer flex flex-col">
-                        <div class="h-48 overflow-hidden">
-                            <img src="assets/images/otra-imagen.webp" alt="Otra novedad" class="w-full h-full object-cover rounded-t-lg">
-                        </div>
-                        <div class="p-4 flex-1 flex flex-col">
-                            <h3 class="font-semibold text-lg mb-2">Otra presentación destacada</h3>
-                            <div class="text-container flex-1 flex flex-col min-h-[120px]">
-                                <p class="text-gray-700 text-sm preview-text line-clamp-5">
-                                    Texto resumido de la noticia o evento para la vista previa, que puede ser más largo o más corto que los demás.
-                                </p>
-                                <div class="mt-2 full-text" style="display:none;">
-                                    <p class="text-gray-700 text-sm">
-                                        Texto completo de la noticia o evento para que se despliegue al hacer clic en “Seguir leyendo”. Este texto es mucho más largo que el de la vista previa para mostrar la funcionalidad completa.
-                                    </p>
-                                    <a href="#" target="_blank" class="mt-2 inline-block text-blue-600 font-semibold hover:underline">
-                                        Ver más detalles →
-                                    </a>
-                                </div>
-                            </div>
-                            <button class="mt-4 px-4 py-2 bg-primary text-white font-semibold rounded hover:bg-primary-dark toggle-text">Seguir leyendo</button>
-                        </div>
-                    </div>                
-                    
-                </div>
-            </div>
-            
-            <div class="swiper-button-next"></div>
-        </div>
-    </div>
-</section> --> 
 
 <!-- Separador -->
 <div class="relative h-1">
@@ -641,29 +533,29 @@
     <!-- Card 1 -->
     <div class="bg-white text-card-foreground flex flex-col rounded-xl border shadow-lg hover:shadow-2xl transition-shadow duration-300 overflow-hidden">
       <div class="relative h-48">
-        <img alt="Concierto Sinfónico de Primavera" class="w-full h-full object-cover" src="/symphony-orchestra-concert-hall.png">
+        <img alt="Noche de Swing" class="w-full h-full object-cover" src="assets/images/eventos/sinfonica-swing.jpg">
         <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
         <div class="absolute bottom-4 left-4 text-white">
           <div class="flex items-center space-x-2 text-sm">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M8 2v4M16 2v4M3 10h18M3 4h18v18H3z"/></svg>
-            <span>15 de Abril, 2024</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" color="yellow" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M8 2v4M16 2v4M3 10h18M3 4h18v18H3z"/></svg>
+            <span>Sábado 4 de Octubre, 2025</span>
           </div>
         </div>
       </div>
       <div class="px-6 py-6 space-y-4">
-        <h3 class="text-xl font-bold">Concierto Sinfónico de Primavera</h3>
+        <h3 class="text-xl font-bold">NOCHE DE SWING</h3>
         <div class="flex items-center text-muted-foreground text-sm">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          <span>20:00</span>
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" color="blue" fill="none" viewBox="0 0 24 24" stroke="currentColor"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <span>21:00</span>
         </div>
         <div class="flex items-center text-muted-foreground text-sm">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1116 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          <span>Teatro Nacional, Ciudad de México</span>
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" color="red" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1116 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span><strong></strong>Teatro Oficial Juan de Vera </strong>(San Juan 637), Ciudad de Corrientes</span>
         </div>
         <p class="text-sm leading-relaxed text-muted-foreground">
-          Interpretación de obras de Beethoven y Brahms con la Orquesta Sinfónica Nacional.
+          Orquesta Sinfónica de Corrientes - Jazz Big Band.
         </p>
-        <a href="evento1.html" class="w-full mt-4 bg-blue-600 text-white font-medium rounded-md h-10 px-4 py-2 flex items-center justify-center hover:bg-blue-700 transition">
+        <a href="https://weepas.ar/detalle-evento/NOCHE%20DE%20SWING%20-%20Orquesta%20Sinf%C3%B3nica%20de%20Corrientes%20Jazz%20Big%20Band" class="w-full mt-4 bg-blue-600 text-white font-medium rounded-md h-10 px-4 py-2 flex items-center justify-center hover:bg-blue-700 transition">
           Más Información
         </a>
       </div>
@@ -682,7 +574,7 @@
         </div>
       </div>
       <div class="px-6 py-6 space-y-4">
-        <h3 class="text-xl font-bold">Masterclass Internacional de Dirección Coral</h3>
+        <h3 class="text-xl font-bold">Masterclass de Dirección Coral</h3>
         <div class="flex items-center text-muted-foreground text-sm">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
           <span>10:00</span>
@@ -713,7 +605,7 @@
         </div>
       </div>
       <div class="px-6 py-6 space-y-4">
-        <h3 class="text-xl font-bold">Festival Internacional de Música Coral</h3>
+        <h3 class="text-xl font-bold">Festival de Música Coral</h3>
         <div class="flex items-center text-muted-foreground text-sm">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
           <span>18:30</span>
@@ -739,6 +631,21 @@
     </a>
   </div>
 </section>
+
+<!--Foto con frase -->
+<section class="relative w-full h-[80vh] sm:h-[70vh] md:h-[80vh] lg:h-[90vh] bg-cover bg-center" style="background-image: url('assets/images/fotofrase.JPG');">
+  <div class="absolute inset-0 flex flex-col justify-center items-center text-center text-white px-4">
+    <!-- Texto principal con tipografía elegante y sombra -->
+    <h2 style="font-family: 'Alan Sans', sans-serif;" class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-shadow-md leading-relaxed mb-4">
+     "Las obras de arte son vestigios que adquieren vida cada vez que el artista la interpreta. Cada interpretación es un momento único e irrepetible."
+    </h2>
+    <!-- Firma alineada a la derecha -->
+    <p class="text-3xl text-shadow-md absolute bottom-12 right-16 font-serif italic opacity-95">
+      - Andrea Fusco - 
+    </p>
+  </div>
+</section>
+
 
 <div class="w-full flex justify-center my-8">
   <a href="#top" 

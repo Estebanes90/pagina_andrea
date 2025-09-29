@@ -57,7 +57,6 @@ document.addEventListener("DOMContentLoaded", function () {
 */
 // =================== CARRUSEL ===================
 // Carrusel de imágenes con overlay y dots indicadores
-
 document.addEventListener("DOMContentLoaded", function () {
   let currentSlide = 0;
   const slides = document.querySelectorAll(".carousel-slide");
@@ -65,11 +64,11 @@ document.addEventListener("DOMContentLoaded", function () {
   const nextBtn = document.getElementById("next");
   const dotsContainer = document.querySelector(".carousel-dots");
 
-  // Crear los puntos dinámicamente según cantidad de slides
+  // Crear los puntos dinámicamente según la cantidad de slides
   slides.forEach((_, index) => {
     const dot = document.createElement("button");
     dot.className =
-      "dot w-3 h-3 rounded-full bg-gray-400 hover:bg-gray-600 focus:outline-none";
+      "dot w-3 h-3 rounded-full bg-gray-400 hover:bg-yellow-600 focus:outline-none"; // Color inicial de los puntos
     dot.addEventListener("click", () => {
       currentSlide = index;
       showSlide(currentSlide);
@@ -77,21 +76,21 @@ document.addEventListener("DOMContentLoaded", function () {
     dotsContainer.appendChild(dot);
   });
 
-  const dots = document.querySelectorAll(".dot");
+  const dots = document.querySelectorAll(".carousel-dots button");
 
   // Mostrar un slide según índice
   function showSlide(index) {
     slides.forEach((slide, i) => {
       slide.classList.add("hidden");
       slide.classList.remove("active");
-      dots[i].classList.remove("bg-gray-800");
-      dots[i].classList.add("bg-gray-400");
+      dots[i].classList.remove("bg-blue-800");  // Elimina el color activo
+      dots[i].classList.add("bg-gray-400");    // Vuelve a poner el color inactivo
     });
 
     slides[index].classList.remove("hidden");
     slides[index].classList.add("active");
     dots[index].classList.remove("bg-gray-400");
-    dots[index].classList.add("bg-gray-800");
+    dots[index].classList.add("bg-blue-800");  // Marca el punto activo con el color correcto
   }
 
   // Siguiente slide

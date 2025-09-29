@@ -5,11 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" href="assets/images/logo.png" type="image/png" />
   <title>Recursos Musicales - Andrea Fusco</title>
+  <link rel="icon" href="assets/images/logo.png" type="image/png" />
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/style_elegante.css" />
   <link rel="stylesheet" href="assets/css/recursos.css" />
 </head>
-<body class="bg-[#f0f6ff] text-gray-800">
+<body class="bg-[#f0f6ff] text-gray-800" id="top">
 
   <!-- NAVBAR dinámico -->
   <div id="navbar-placeholder"></div>
@@ -284,8 +285,9 @@
 
   <!-- FOOTER dinámico -->
   <div id="footer-placeholder"></div>
+  
+<script src="https://kit.fontawesome.com/d4be720107.js" crossorigin="anonymous"></script>
 
-  <script src="script.js"></script>
   <script>
     function toggleLista(id) {
       document.querySelectorAll(".recurso-card > ul, .recurso-card > div").forEach(el => {
@@ -297,5 +299,7 @@
       });
     }
   </script>
+
+  <script src="script.js"></script>
 </body>
 </html>

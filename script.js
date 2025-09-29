@@ -1,4 +1,3 @@
-
 document.addEventListener("DOMContentLoaded", () => {
   const currentPage = window.location.pathname.split("/").pop() || "index.html";
   const basePath = window.location.pathname.includes("/notas/") ? "../" : "./";
@@ -29,7 +28,6 @@ document.addEventListener("DOMContentLoaded", () => {
         const linkHref = link.getAttribute("href");
         if (linkHref === currentPage || linkHref === "./" + currentPage || linkHref === "../" + currentPage) {
           link.classList.add("active");
-          /*link.classList.add("bg-blue-300", "shadow", "rounded-lg", "font-semibold");*/
         }
       });
 
@@ -43,14 +41,34 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
 
-
   // Cargar footer
   fetch(basePath + "components/footer.html")
     .then(res => res.text())
     .then(data => {
       const footer = document.getElementById("footer-placeholder");
+      console.log("Footer data:", data); 
       if (footer) {
         footer.innerHTML = data;
+
+        // Actualizar el año en el footer
+        document.getElementById("year").textContent = new Date().getFullYear();
+
+        // Lógica para el botón "Volver arriba"
+        const backToTop = document.getElementById('backToTop');
+        if (backToTop) {
+          backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          });
+
+          // Mostrar u ocultar el botón "Volver arriba" según el scroll
+          window.addEventListener('scroll', () => {
+            if (window.scrollY > 200) {
+              backToTop.style.display = 'block';
+            } else {
+              backToTop.style.display = 'none';
+            }
+          });
+        }
       }
     });
 });

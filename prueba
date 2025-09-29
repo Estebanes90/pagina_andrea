@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carrusel de Eventos</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  .carousel-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding: 10px 0;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.05s linear;
+  will-change: transform;
+}
+
+.carousel-card {
+  min-width: 250px;
+  max-width: 280px;
+  flex: 0 0 auto;
+  margin-right: 16px;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+}
+
+.carousel-card:hover {
+  transform: scale(1.03);
+}
+
+.carousel-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background-color: rgba(0,0,0,0.5);
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 0.375rem;
+  font-size: 1.5rem;
+  transition: background-color 0.2s ease;
+}
+
+.carousel-btn:hover { background-color: rgba(0,0,0,0.7); }
+
+.prev-btn { left: 10px; }
+.next-btn { right: 10px; }
+
+.preview-text, .full-text { font-size: 0.875rem; color: #4a5568; }
+
+.full-link { margin-top: 0.5rem; display: none; }
+
+.toggle-text {
+  margin-top: 0.5rem;
+  background-color: #2563eb;
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  transition: background-color 0.2s ease;
+}
+
+.toggle-text:hover { background-color: #1d4ed8; }
+
+@media (max-width: 1024px) { .carousel-card { min-width: 220px; max-width: 240px; } }
+@media (max-width: 768px) { .carousel-card { min-width: 180px; max-width: 200px; } }
+@media (max-width: 480px) { .carousel-card { min-width: 160px; max-width: 180px; } }
+
+</style>
+</head>
+<body class="bg-gray-100 p-4">
+
+<!-- CARRUSEL DE NOVEDADES -->
+<section id="novedades" class="relative py-12 bg-gray-100">
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl font-bold mb-2">Novedades</h2>
+    <h1 class="text-xl mb-6">Últimas novedades y presentaciones artísticas de Andrea.</h1>
+
+    <!-- Botones laterales -->
+    <button class="carousel-btn prev-btn">&#10094;</button>
+    <button class="carousel-btn next-btn">&#10095;</button>
+
+    <!-- Contenedor del carrusel -->
+    <div class="carousel-container">
+      <div class="carousel-track">
+
+        <!-- Tarjeta 1 -->
+        <div class="carousel-card">
+          <img src="assets/images/renace-teatro.jpg" alt="Renace">
+          <div class="p-3 flex-1 flex flex-col">
+            <h3>“Renace” dejó abiertas las puertas del Teatro Oficial Juan de Vera</h3>
+            <div class="text-container flex-1 flex flex-col">
+              <p class="preview-text">Un rol preponderante tuvo la Orquesta Sinfónica de la Provincia de Corrientes bajo dirección de la Maestra Andrea Fusco...</p>
+              <p class="full-text" style="display:none;">Un rol preponderante tuvo la Orquesta Sinfónica de la Provincia de Corrientes bajo dirección de la Maestra Andrea Fusco en la interpretación de los cuadros musicales en vivo...</p>
+              <a href="https://culturacorrientes.com/en-la-reapertura-del-teatro-oficial-juan-de-vera-valdes-pidio-que-sea-un-teatro-abierto-a-la-comunidad/" target="_blank" class="full-link">Ver más detalles →</a>
+            </div>
+            <button class="toggle-text mt-2">Seguir leyendo</button>
+          </div>
+        </div>
+
+        <!-- Tarjeta 2 -->
+        <div class="carousel-card">
+          <img src="assets/images/los-viajes-del-joven-wether.webp" alt="Los viajes del joven Werther">
+          <div class="p-3 flex-1 flex flex-col">
+            <h3>"Los viajes del joven Werther"</h3>
+            <div class="text-container flex-1 flex flex-col">
+              <p class="preview-text">Concierto sinfónico interpretado por la Orquesta Sinfónica de la Provincia de Corrientes el día 6 de septiembre de 2025...</p>
+              <p class="full-text" style="display:none;">Concierto sinfónico interpretado por la Orquesta Sinfónica de la Provincia de Corrientes el día 6 de septiembre de 2025...</p>
+              <a href="https://culturacorrientes.com/la-orquesta-sinfonica-brindara-el-concierto-los-viajes-del-joven-werther-en-el-teatro-vera-2/" target="_blank" class="full-link">Ver más detalles →</a>
+            </div>
+            <button class="toggle-text mt-2">Seguir leyendo</button>
+          </div>
+        </div>
+
+        <!-- Tarjeta 3 -->
+        <div class="carousel-card">
+          <img src="assets/images/Patricia Sosa/orquesta-patricia-sosa-29.jpg" alt="Alquimia">
+          <div class="p-3 flex-1 flex flex-col">
+            <h3>Patricia Sosa presentó "Alquimia" en el Teatro Vera a sala llena</h3>
+            <div class="text-container flex-1 flex flex-col">
+              <p class="preview-text">El pasado 12 de Septiembre, la Orquesta Sinfónica de Corrientes fue la invitada de lujo a este espectáculo...</p>
+              <p class="full-text" style="display:none;">El pasado 12 de Septiembre, la Orquesta Sinfónica de Corrientes fue la invitada de lujo a este espectáculo que forma parte de la gira nacional "Alquimia"...</p>
+              <a href="https://www.diarioepoca.com/1362419-patricia-sosa-lloro-en-el-teatro-vera-y-emociono-a-sala-llena" target="_blank" class="full-link">Ver más detalles →</a>
+            </div>
+            <button class="toggle-text mt-2">Seguir leyendo</button>
+          </div>
+        </div>
+
+        <!-- Tarjeta 4 -->
+        <div class="carousel-card">
+          <img src="assets/images/otra-imagen.webp" alt="Otra novedad">
+          <div class="p-3 flex-1 flex flex-col">
+            <h3>Otra presentación destacada</h3>
+            <div class="text-container flex-1 flex flex-col">
+              <p class="preview-text">Texto resumido de la noticia o evento para la vista previa...</p>
+              <p class="full-text" style="display:none;">Texto completo de la noticia o evento para que se despliegue al hacer clic en “Seguir leyendo”.</p>
+              <a href="#" target="_blank" class="full-link">Ver más detalles →</a>
+            </div>
+            <button class="toggle-text mt-2">Seguir leyendo</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const track = document.querySelector('.carousel-track');
+  let cards = Array.from(track.children);
+  const cardStyle = getComputedStyle(cards[0]);
+  const cardMargin = parseFloat(cardStyle.marginRight) + parseFloat(cardStyle.marginLeft);
+  const cardWidth = cards[0].offsetWidth + cardMargin;
+
+  let scrollPosition = 0;
+  let carouselInterval;
+
+  // Clonar las tarjetas para efecto infinito
+  const clones = cards.map(card => card.cloneNode(true));
+  clones.forEach(clone => track.appendChild(clone)); // Agregar las tarjetas clonadas al final
+  cards = Array.from(track.children); // Ahora tenemos tanto las originales como las clonadas
+
+  function startCarousel() {
+    carouselInterval = setInterval(() => {
+      scrollPosition += 1;
+      track.style.transform = `translateX(-${scrollPosition}px)`;
+
+      // Si llegamos al final de las tarjetas originales (cuando llegamos al final de la fila)
+      if (scrollPosition >= cardWidth * cards.length / 2) { // /2 porque tenemos las tarjetas clonadas
+        track.style.transition = 'none';  // Quitar transición para evitar el salto
+        scrollPosition = 0;
+        track.style.transform = `translateX(0)`; // Volver al principio sin salto
+        setTimeout(() => {
+          track.style.transition = 'transform 0.05s linear'; // Rehabilitar transición
+        }, 20);
+      }
+    }, 25); // Velocidad de desplazamiento
+  }
+
+  function stopCarousel() {
+    clearInterval(carouselInterval); 
+    carouselInterval = null;
+  }
+
+  startCarousel(); // Comenzamos el carrusel al cargar la página
+
+  // Botón de retroceso (prev)
+  document.querySelector('.prev-btn').addEventListener('click', () => {
+    stopCarousel();
+    scrollPosition -= cardWidth;
+
+    // Si estamos antes de la primera tarjeta, vamos a la última
+    if (scrollPosition < 0) {
+      scrollPosition = cardWidth * cards.length / 2;  // Poner la última tarjeta original en pantalla
+    }
+
+    track.style.transition = 'transform 0.3s ease-in-out';
+    track.style.transform = `translateX(-${scrollPosition}px)`;
+  });
+
+  // Botón de avance (next)
+  document.querySelector('.next-btn').addEventListener('click', () => {
+    stopCarousel();
+    scrollPosition += cardWidth;
+    track.style.transition = 'transform 0.3s ease-in-out';
+    track.style.transform = `translateX(-${scrollPosition}px)`;
+
+    // Si llegamos al final de las tarjetas originales, volvemos al inicio
+    if (scrollPosition >= cardWidth * cards.length / 2) { // /2 porque tenemos las tarjetas clonadas
+      setTimeout(() => {
+        track.style.transition = 'none';
+        scrollPosition = 0;
+        track.style.transform = `translateX(0)`; // Volver al principio sin salto
+        setTimeout(() => { 
+          track.style.transition = 'transform 0.3s ease-in-out'; // Rehabilitar la transición
+        }, 20);
+      }, 300); // Delay para que se vea el efecto
+    }
+  });
+
+  // Toggle "Seguir leyendo"
+  track.querySelectorAll('.carousel-card').forEach(card => {
+    const button = card.querySelector('.toggle-text');
+    const preview = card.querySelector('.preview-text');
+    const full = card.querySelector('.full-text');
+    const link = card.querySelector('.full-link');
+
+    button.addEventListener('click', e => {
+      e.stopPropagation();
+      if (full.style.display === 'none') {
+        full.style.display = 'block';
+        link.style.display = 'inline-block';
+        preview.style.display = 'none';
+        button.textContent = 'Mostrar menos';
+        stopCarousel(); // Detenemos el carrusel cuando se hace clic en "Seguir leyendo"
+
+        // Desplazar suavemente hasta la tarjeta
+        card.scrollIntoView({
+          behavior: 'smooth',
+          block: 'center',
+        });
+      } else {
+        full.style.display = 'none';
+        link.style.display = 'none';
+        preview.style.display = 'block';
+        button.textContent = 'Seguir leyendo';
+        startCarousel(); // Reiniciamos el carrusel cuando se hace clic en "Mostrar menos"
+      }
+    });
+  });
+
+  // Funcionalidad para deslizar en móviles
+  let touchStartX = 0, touchEndX = 0;
+  track.addEventListener('touchstart', e => touchStartX = e.changedTouches[0].screenX);
+  track.addEventListener('touchend', e => {
+    touchEndX = e.changedTouches[0].screenX;
+    if (touchStartX - touchEndX > 50) document.querySelector('.next-btn').click();
+    if (touchEndX - touchStartX > 50) document.querySelector('.prev-btn').click();
+  });
+});
+</script>
+
+</body>
+</html>
+
+

@@ -1,3 +1,68 @@
-<footer class="bg-gray-200 text-center py-4 text-sm">
-  © 2025 Andrea Fusco. Todos los derechos reservados.
+<!-- FOOTER -->
+<footer class="bg-gray-900 text-gray-300 py-10 relative">
+  <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between gap-8">
+
+    <!-- Columna 1: Información sobre Andrea Fusco -->
+    <div class="flex flex-col w-full md:w-1/4">
+      <div class="flex items-center mb-4">
+          <img src="assets/images/logo.png" alt="Logo de Andrea Fusco" class="h-12 mr-4 rounded-full">
+          <h2>Andrea Fusco</h2>
+      </div>
+
+      <p>Dirección orquestal, coral y formación musical.</p><br>
+
+      <h3 class="mt-6">Seguime</h3>
+
+      
+      <!-- Redes Sociales debajo de Andrea Fusco -->
+      <div class="flex space-x-4 mt-4">
+        <a href="https://www.youtube.com/@MsAndreaFusco" target="_blank" class="social-icon text-2xl">
+          <i class="fab fa-youtube"></i>
+        </a>
+        <a href="https://www.instagram.com/mtra.andreafusco" target="_blank" class="social-icon text-2xl">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.facebook.com/andrea.fusco.5070" target="_blank" class="social-icon text-2xl">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- Columna 2: Secciones (en la mitad de la página) -->
+    <div class="flex flex-col w-full md:w-1/4 md:ml-1/2">
+      <h3 class="mt-6">Secciones</h3>
+      <ul class="space-y-2">
+        <li><a href="index.html#biografia" class="footer-link">Biografía</a></li>
+        <li><a href="index.html#novedades" class="footer-link">Novedades</a></li>
+        <li><a href="index.html#opiniones" class="footer-link">Opiniones</a></li>
+        <li><a href="index.html#eventos" class="footer-link">Próximos Eventos</a></li>
+      </ul>
+    </div>
+
+    <!-- Columna 3: Menú (empezando en los 3/4 de la página) -->
+    <div class="flex flex-col w-full md:w-1/4 md:ml-1/4">
+      <h3 class="mt-6">Menú</h3>
+      <ul class="space-y-2">
+        <li><a href="recursos.html" class="footer-link">Recursos</a></li>
+        <li><a href="galeria.html" class="footer-link">Galería</a></li>
+        <li><a href="prensa.html" class="footer-link">Prensa</a></li>
+        <li><a href="contacto.html" class="footer-link">Contacto</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- Línea inferior / copyright -->
+  <div class="border-t border-gray-700 mt-8 pt-4 text-center text-gray-400 text-sm">
+    © <span id="year"></span> Andrea Fusco. Todos los derechos reservados.
+  </div>
+
+  <!-- Botón “Volver arriba” -->
+  <button id="backToTop" class="fixed bottom-6 right-6 bg-yellow-400 text-gray-900 p-3 rounded-full shadow-lg hover:bg-yellow-500 transition-opacity duration-300 opacity-80 hover:opacity-100 z-50">
+    ↑
+  </button>
 </footer>
+
+<!-- Font Awesome -->
+
+<script src="https://kit.fontawesome.com/d4be720107.js" crossorigin="anonymous"></script>

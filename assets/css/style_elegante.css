@@ -7,22 +7,21 @@ body {
   padding-top: 64px; /* mismo alto que el navbar */
 }
 
-
 .bg {
-background-color: #05182b;
+  background-color: #05182b;
 }
 
 /* Logo */
 .logo-af {
   font-family: 'Tangerine', serif;
   font-size: 50px;
-  /*text-shadow: 4px 4px 4px #aaa;*/
   text-shadow: 6px 6px 6px #000000;
-  color: white; /*#1a202c;*/
+  color: white;
   letter-spacing: 3px;
   line-height: 1;
   white-space: nowrap;
 }
+
 
 .logo-link {
   text-decoration: none;
@@ -30,9 +29,21 @@ background-color: #05182b;
   display: inline-block;
 }
 
-.logo-link:hover {
-  text-shadow: 6px 6px 6px rgba(255, 255, 255, 0.4);
+/* Sombra al hover del texto del logo */
+#navb .logo-af:hover span {
+  text-shadow: 4px 4px 10px rgba(232, 231, 231, 0.635); /* Sombra del texto */
 }
+
+/* Sombra al hover de la imagen del logo */
+#navb .logo-af:hover img {
+  box-shadow: 0 4px 10px rgba(212, 231, 5, 0.655); /* Sombra externa para la imagen */
+}
+
+/* Añadir transición suave para que el efecto sea gradual */
+#navb .logo-af {
+  transition: all 0.3s ease;
+}
+
 
 /* Fijar altura del navbar */
 header {
@@ -42,18 +53,17 @@ header {
 
 header .logo-af {
   display: flex;
-  align-items: center;
+  align-items:flex-end;
 }
 
 .nav-link {
-  color: #ffffff; /* Texto blanco */
-  background: none; /* Sin fondo */
+  color: #ffffff;
+  background: none;
   padding: 0.5rem 1rem;
   border-radius: 0;
   transition: color 0.3s ease, border-bottom 0.3s ease;
   position: relative;
 }
-
 
 /* Hover: línea elegante debajo */
 .nav-link::after {
@@ -63,38 +73,38 @@ header .logo-af {
   height: 2px;
   left: 50%;
   bottom: 0;
-  background-color: #60a5fa; /* azul claro (Tailwind blue-400) */
+  background-color: #60a5fa;
   transition: all 0.3s ease;
   transform: translateX(-50%);
 }
 
 .nav-link:hover::after {
-  width: 100%; /* Se expande al hover */
+  width: 100%;
 }
 
 /* Color en hover */
 .nav-link:hover {
-  color: #d1d5db; /* gris claro */
+  color: #d1d5db;
 }
 
 /* Página activa */
 .nav-link.active {
-  color: #60a5fa; /* Azul claro para indicar página actual */
+  color: #60a5fa;
   font-weight: 600;
 }
 
 .nav-link.active::after {
   content: "";
   position: absolute;
-  width: 100%;   /* siempre subrayado */
+  width: 100%;
   height: 2px;
   left: 50%;
   bottom: 0;
-  background-color: #60a5fa; /* Azul claro */
+  background-color: #60a5fa;
   transform: translateX(-50%);
 }
 
-/* Carrusel */
+/* Carrusel genérico */
 .carousel {
   max-width: 1200px;
   margin: 1.5rem auto;
@@ -116,37 +126,16 @@ header .logo-af {
   display: block;
 }
 
-/* Botones carrusel (si tienes alguno) */
-.carousel button {
-  font-size: 2rem;
-  color: #1a202c;
-  background-color: rgba(255, 255, 255, 0.7);
-  border: none;
-  border-radius: 9999px;
-  padding: 0.5rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-  transition: background-color 0.3s;
-  cursor: pointer;
-}
-
-.carousel button:hover {
-  background-color: rgba(255, 255, 255, 0.9);
-}
-
 /* Transición suave del menú móvil */
 #mobile-menu {
   transition: max-height 0.3s ease-in-out;
 }
 
-
-/* Responsive: móviles hasta 640px */
+/* Responsive: móviles hasta 640px (otro carrusel, no el de inicio) */
 @media (max-width: 640px) {
-  .logo-af {
-    font-size: 1.8rem;
-  }
-
+  
   .carousel {
-    height: 220px;
+    height: 120px;
   }
 
   .carousel button {
@@ -170,92 +159,97 @@ header .logo-af {
   }
 
   #nav-menu.expanded {
-  max-height: 500px;
+    max-height: 500px;
   }
 }
 
-/* Estilos para la sección de Novedades */
+/* Sección de Novedades */
 #novedades {
-    padding: 50px 0;
-    background-color: #f4f4f4; /* Puedes cambiar este color */
-    text-align: center;
+  padding: 50px 0;
+  background-color: #f4f4f4;
+  text-align: center;
 }
 
 #novedades h2 {
-    font-size: 2.5em;
-    margin-bottom: 30px;
-    color: #333;
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  color: #333;
 }
 
 /* Carrusel de Novedades */
 .carousel-container {
-    overflow: hidden;
-    width: 90%;
-    margin: 0 auto;
+  overflow: hidden;
+  width: 90%;
+  margin: 0 auto;
 }
 
 .carousel-track {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-    will-change: transform; /* Mejora el rendimiento */
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  will-change: transform;
 }
 
 .carousel-card {
-    flex: 0 0 300px;
-    margin: 0 15px;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    text-decoration: none;
-    color: #333;
-    display: block;
+  flex: 0 0 300px;
+  margin: 0 15px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none;
+  color: #333;
+  display: block;
 }
 
 .carousel-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .carousel-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
 }
 
 .card-content {
-    padding: 20px;
-    text-align: left;
-    background-color: #fff;
+  padding: 20px;
+  text-align: left;
+  background-color: #fff;
 }
 
 .card-content h3 {
-    font-size: 1.2em;
-    margin-top: 0;
+  font-size: 1.2em;
+  margin-top: 0;
 }
 
 .card-content p {
-    font-size: 0.9em;
-    line-height: 1.4;
+  font-size: 0.9em;
+  line-height: 1.4;
 }
 
-/* Responsividad para tabletas y móviles */
+/* Responsividad para Novedades */
 @media (max-width: 768px) {
-    .carousel-card {
-        flex: 0 0 250px;
-        margin: 0 10px;
-    }
-}
-@media (max-width: 480px) {
-    .carousel-card {
-        flex: 0 0 90%;
-    }
+  .carousel-card {
+    flex: 0 0 250px;
+    margin: 0 10px;
+  }
 }
 
-/* === HERO CAROUSEL FULL WIDTH === */
+@media (max-width: 480px) {
+  .carousel-card {
+    flex: 0 0 90%;
+  }
+}
+
+/* === HERO CAROUSEL FULL WIDTH (Inicio) === */
 #inicio {
   position: relative;
-  height: 90vh; /* podés cambiar a 100vh para full pantalla */
+  height: 90vh; /* en desktop ocupa casi toda la pantalla */
+}
+#navb {
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 .carousel-slide {
@@ -277,14 +271,14 @@ header .logo-af {
 
 /* Texto sobre las imágenes */
 .carousel-caption {
-  position: absolute;
+  position:inherit;
   bottom: 10%;
   left: 50%;
   transform: translateX(-50%);
-  text-align: center;
+  text-align:center;
   color: white;
   opacity: 0;
-  transform: translate(-50%, 30px); /* empieza desplazado abajo */
+  transform: translate(-50%, 30px);
   transition: all 0.8s ease-in-out;
 }
 
@@ -296,43 +290,45 @@ header .logo-af {
 .carousel-caption h2 {
   font-size: 2.5rem;
   font-weight: bold;
-  text-shadow: 2px 2px 10px rgba(0,0,0,0.6);
+  text-shadow: 5px 5px 3px rgba(0,0,0,1);
 }
 
 .carousel-caption p {
   font-size: 1.25rem;
   margin-top: 0.5rem;
-  text-shadow: 1px 1px 6px rgba(0,0,0,0.6);
+  text-shadow: 3px 3px 2px rgba(4, 7, 47, 0.901);
+  font-weight: bolder;
+  font-style: italic;
+  color:rgb(236, 232, 226);
 }
 
 /* Botones de navegación */
-#inicio button {
+/* Estilo de los botones de navegación */
+#prev, #next {
   font-size: 2rem;
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.5);
   border: none;
   cursor: pointer;
   transition: background-color 0.3s;
 }
 
-#inicio button:hover {
+#prev:hover, #next:hover {
   background-color: rgba(255, 255, 255, 0.9);
 }
 
 /* Puntos */
+/* Estilo para los puntos */
 .carousel-dots button {
   width: 12px;
   height: 12px;
-  background: #bbb;
   border-radius: 50%;
   border: none;
   transition: background 0.3s;
+  cursor: pointer;
 }
 
-.carousel-dots button.active {
-  background: #f47915;
-}
 
-/* === Botones de cada slide === */
+/* Botones de cada slide */
 .carousel-buttons {
   margin-top: 1.5rem;
 }
@@ -344,10 +340,240 @@ header .logo-af {
   font-weight: 600;
   text-decoration: none;
   transition: all 0.3s ease;
-  background-color: #facc15; /* amarillo pálido */
-  color: #1a202c; /* gris oscuro */
+  background-color: #fcd84b;
+  color: #1a202c;
 }
 
 .carousel-buttons a:hover {
-  background-color: #eab308; /* amarillo más fuerte */
+  background-color: #bd9008fe;
+}
+
+/* ============================
+   Ajustes responsivos carrusel #inicio
+   ============================ */
+
+/* Móviles muy chicos (hasta 480px) */
+@media (max-width: 480px) {
+  #inicio {
+    height: 40vh;
+  }
+
+  .logo-af{
+    font-size: 1.5rem;
+  }
+
+  header .logo-af {
+  display: flex;
+  align-items:end;
+  }
+
+  #navb{
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  #inicio .carousel-slide img {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .carousel-caption {
+    bottom: 10%;
+    width: 80%;
+  }
+
+  #inicio .carousel-caption h2 {
+    font-size: 1.5rem;
+  }
+
+  #inicio .carousel-caption p {
+    font-size: 1rem;
+  }
+
+  #inicio .carousel-buttons a {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.75rem;
+  }
+
+  #inicio button {
+    font-size: 1rem;
+    padding: 0.3rem;
+  }
+
+  #inicio .carousel-dots {
+    bottom: 8px;
+  }
+}
+
+/* Móviles medianos y grandes (481px a 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .logo-af{
+    font-size: 1.8rem;
+  }
+
+  header .logo-af {
+  display: flex;
+  align-items:end ;
+  }
+
+  #inicio {
+    height: 40vh;
+  }
+
+  #navb{
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  #inicio .carousel-slide img {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  
+  .carousel-caption {
+    bottom: 10%;
+    width: 80%;
+  }
+
+  #inicio .carousel-caption h2 {
+    font-size: 1.5rem;
+  }
+
+  #inicio .carousel-caption p {
+    font-size: 1rem;
+  }
+
+  #inicio .carousel-buttons a {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+  }
+
+  #inicio button {
+    font-size: 1.2rem;
+    padding: 0.4rem;
+  }
+
+  #inicio .carousel-dots {
+    bottom: 10px;
+  }
+}
+
+/*-------------------------------------------------------*/
+/*                        FOOTER                         */
+/*-------------------------------------------------------*/
+.footer-link {
+  color: #9ca3af;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+  color: #facc15;
+}
+
+.social-icon {
+  color: #9ca3af;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #facc15;
+  transform: scale(1.2);
+}
+
+footer h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+footer h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 0.75rem;
+}
+
+footer p {
+  font-size: 0.875rem;
+  color: #9ca3af;
+  line-height: 1.5;
+}
+
+footer .border-t {
+  border-top: 1px solid #374151;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  font-size: 0.875rem;
+  color: #9ca3af;
+  text-align: center;
+}
+
+/* Botón “Volver arriba” */
+#backToTop {
+  display: none; /* oculto inicialmente */
+}
+
+@media (max-width: 480px) {
+  footer h2 {
+    font-size: 1.25rem;
+  }
+  footer h3 {
+    font-size: 1rem;
+  }
+  footer p {
+    font-size: 0.75rem;
+  }
+  .social-icon {
+    font-size: 1.25rem;
+  }
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+  .carousel-caption {
+    bottom: 20%; /* Mueve el texto hacia arriba, ajusta el valor según sea necesario */
+  }
+
+  .carousel-caption h2 {
+    font-size: 2rem; /* Reduce el tamaño del título */
+  }
+
+  .carousel-caption p {
+    font-size: 1.2rem; /* Reduce el tamaño del párrafo */
+  }
+
+  #prev, #next {
+    font-size: 2rem; /* Ajusta el tamaño de los botones de navegación */
+  }
+
+  .carousel-buttons a {
+    font-size: 1rem; /* Reduce el tamaño de la fuente de los botones */
+    padding: 0.5rem 1rem; /* Reduce el padding para que no sean tan grandes */
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-caption {
+    bottom: 15%; /* Mueve aún más arriba el texto */
+  }
+
+  .carousel-caption h2 {
+    font-size: 1.5rem; /* Ajusta aún más el tamaño del título */
+  }
+
+  .carousel-caption p {
+    font-size: 1rem; /* Ajusta el tamaño del párrafo */
+  }
+
+  #prev, #next {
+    font-size: 1.5rem; /* Ajusta el tamaño de los botones de navegación */
+  }
+
+  .carousel-buttons a {
+    font-size: 0.9rem; /* Reduce aún más el tamaño de la fuente */
+    padding: 0.5rem 0.8rem; /* Ajusta el padding para pantallas más pequeñas */
+  }
 }
