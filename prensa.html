@@ -28,7 +28,7 @@
         <option value="">Todas las categorías</option>
         <option value="entrevista">Entrevistas</option>
         <option value="concierto">Conciertos</option>
-        <option value="articulo">Artículos</option>
+        <option value="charla">Charlas</option>
         <option value="noticia">Noticias</option>
       </select>
       <select id="filtro-orden" class="border rounded px-3 py-2 text-sm">
@@ -38,7 +38,9 @@
     </div>
 
     <!-- Contenedor de notas en columnas -->
-    <div id="contenedor-notas" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+    <div id="contenedor-notas" class="grid grid-cols-1 gap-6"></div>
+
+    <div id="contenedor-notas2" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
 
     <!-- Paginación -->
     <div id="paginacion" class="mt-10 flex justify-center gap-2"></div>
@@ -53,22 +55,22 @@
   <script src="script.js"></script>
   <script>
   const notas = [
-    {
-      titulo: "Publicación en Revista ANTEC Vol 7 N°2- Bases del Nacionalismo Musical en la Argentina",
-      fecha: "Diciembre de 2023",
-      tipo: "articulo",
-      resumen: "Basado en las investigaciones realizadas para el doctorado, este artículo es una introducción al estudio realizado aplicado a la música orquestal argentina, entre fines del siglo XIX y primera mitad del XX.",
-      imagen: "assets/images/revista-antec.jpg",
-      enlace: "https://www.researchgate.net/publication/377907577_Bases_del_nacionalismo_musical_en_la_Argentina"
-    },
-    {
-      titulo: "Publicación en Revista ANTEC Vol 8 N° 1 - Bases del Nacionalismo Musical en la Argentina - segunda parte",
-      fecha: "Junio de 2024",
-      tipo: "articulo",
-      resumen: "En esta segunda parte se abordan analíticamente obras orquestales representativas de cada grupo. Allí se estudia de qué manera los compositores integraron o no y en qué grado, elementos del nacionalismo y la música orquestal de la época.",
-      imagen: "assets/images/revista-antec.jpg",
-      enlace: "https://www.researchgate.net/publication/383163920_Bases_del_nacionalismo_musical_en_la_Argentina_2da_parte"
-    },
+    //{
+    //  titulo: "Publicación en Revista ANTEC Vol 7 N°2- Bases del Nacionalismo Musical en la Argentina",
+    //  fecha: "Diciembre de 2023",
+    //  tipo: "articulo",
+    //  resumen: "Basado en las investigaciones realizadas para el doctorado, este artículo es una introducción al estudio realizado aplicado a la música orquestal argentina, entre fines del siglo XIX y primera mitad del XX.",
+    //  imagen: "assets/images/revista-antec.jpg",
+    //  enlace: "https://www.researchgate.net/publication/377907577_Bases_del_nacionalismo_musical_en_la_Argentina"
+    //},
+    //{
+    //  titulo: "Publicación en Revista ANTEC Vol 8 N° 1 - Bases del Nacionalismo Musical en la Argentina - segunda parte",
+    //  fecha: "Junio de 2024",
+    //  tipo: "articulo",
+    //  resumen: "En esta segunda parte se abordan analíticamente obras orquestales representativas de cada grupo. Allí se estudia de qué manera los compositores integraron o no y en qué grado, elementos del nacionalismo y la música orquestal de la época.",
+    //  imagen: "assets/images/revista-antec.jpg",
+    //  enlace: "https://www.researchgate.net/publication/383163920_Bases_del_nacionalismo_musical_en_la_Argentina_2da_parte"
+    //},
     {
       titulo: "Concierto Italiano",
       fecha: "Junio de 2024",
@@ -78,20 +80,60 @@
       enlace: "notas/conciertoitaliano.html"
     },
     {
-      titulo: "Reflejos de actividad",
-      fecha: "2025-06-24",
+      titulo: "Orquesta Sinfónica y Jazz Big Band Encienden el Teatro Vera con una ‘Noche de Swing’",
+      fecha: "Octubre de 2025",
       tipo: "concierto",
-      resumen: "Andrea Fusco coordinó conciertos educativos para jóvenes talentos...",
-      imagen: "assets/images/concierto1.jpg",
-      enlace: "#"
+      resumen: "Una fusión de estilos se vivió en el Teatro Oficial Juan de Vera, donde la Orquesta Sinfónica de Corrientes y la Jazz Big Band ofrecieron un concierto inolvidable. El público disfrutó de una electrizante «Noche de Swing» que demostró la versatilidad de los músicos correntinos. El espectáculo fue el resultado de la colaboración entre la Jazz Big Band, dirigida por el maestro Aníbal Aguirre, y la Orquesta Sinfónica, bajo la dirección de la Mtra. Andrea Fusco. La propuesta buscó «llegar a nuevos públicos», según detalló Fusco y vaya que lo logró, transformando los instrumentos clásicos para esta ocasión especial. Los músicos de la Orquesta Sinfónica cambiaron sus roles, sustituyendo clarinetes y fagots por saxofones, trompetas, trombones, batería y bajo para conformar la Jazz Big Band. El repertorio se centró en la improvisación y el ritmo característicos del género, transportando al público a la época dorada del jazz. La «Noche de Swing» contó con la destacada participación de los cantantes Verónica Vasco y Francisco Malvido.",
+      imagen: "assets/images/Noche_de_Swing/Swing_1.jpg",
+      enlace: "https://youtu.be/zSmA4StzJ6s?si=-9KmzboPZJJ_RvJg"
     },
     {
-      titulo: "Entrevista en TV",
-      fecha: "2025-05-12",
+      titulo: "Entrevista a la directora Andrea Fusco en el programa 'CREANDO ENCUENTROS' pasión, trayectoria y desafíos de la música en Corrientes",
+      fecha: "2021-05-22",
       tipo: "entrevista",
-      resumen: "Reflexión sobre la música coral en la educación...",
-      imagen: "assets/images/concierto2.jpg",
-      enlace: "#"
+      resumen: "La reconocida directora de orquesta Andrea Fusco fue la invitada de lujo en el ciclo 'Creando Encuentros'. En esta entrevista, la artista correntina revela los hitos de su carrera, desde sus primeros pasos hasta su formación en Europa. Un recorrido por su visión de la dirección musical y su compromiso con la comunidad, equilibrando la gestión de una orquesta profesional con el trabajo en coros amateurs. Un mensaje inspirador sobre la importancia de la educación y la aplicación de ideas globales en el contexto local.",
+      imagen: "assets/images/creando_encuentros.png",
+      enlace: "https://youtu.be/KtuwWnQOj4U?si=Ji57QXzIAoGghKsP"
+    },
+    {
+      titulo: "¡Música para todos! La directora Andrea Fusco nos cuenta cómo la Orquesta Sinfónica de Corrientes llegó a los barrios.",
+      fecha: "2014-10-16",
+      tipo: "entrevista",
+      resumen: "La directora de la Orquesta Sinfónica de la Provincia de Corrientes, Andrea Fusco, ofrece un balance de su gestión desde el año 2007. La entrevista repasa importantes hitos, como el estreno de obras contemporáneas, la colaboración con figuras internacionales y la innovadora inclusión de géneros populares como el chamamé. Asimismo, destaca el proyecto de extensión a la comunidad que acercó a la orquesta a diversos sectores y la importancia del trabajo colectivo para sostener el talento de los músicos y seguir conquistando a la audiencia",
+      imagen: "assets/images/entrevista.png",
+      enlace: "https://youtu.be/LdHecgttWcE?si=BTo2JD3q5I7X1y-B"
+    },
+    {
+      titulo: "La Dra. Andrea Fusco en La Pildora Teve: El talento musical al servicio de la comunidad",
+      fecha: "2024-02-24",
+      tipo: "entrevista",
+      resumen: "La Dra. Andrea Fusco, directora del coro de la Universidad Nacional del Nordeste (UNNE) y de la orquesta sinfónica de la provincia de Corrientes, detalla la importancia de la música como herramienta de inclusión y desarrollo artístico. En el programa, la directora destaca el rol del coro de la UNNE, un taller gratuito y abierto a la comunidad, que brinda un espacio para que personas de todas las edades y profesiones exploren su potencial vocal. Además, la entrevista aborda su trayectoria al frente de la orquesta sinfónica, con la cual trabaja para acercar la música a nuevos públicos a través de presentaciones en hospitales, barrios y diversos escenarios. Un diálogo que demuestra la pasión de la artista por la música, su compromiso con la educación y la cultura, y cómo ambos organismos musicales se conectan con la sociedad correntina.",
+      imagen: "assets/images/entrevista_la_pildora.png",
+      enlace: "https://youtu.be/IfwZV5q6qzI?si=KdcY4qOSp2Z-0AhQ"
+    },
+    {
+      titulo: "EDUARDO LEDESMA PREGUNTA 2022: Más allá de la música. Una conversación íntima con la maestra Andrea Fusco",
+      fecha: "2022-10-25",
+      tipo: "entrevista",
+      resumen: "En una reveladora entrevista, la directora Andrea Fusco, doctora en Artes y titular de la orquesta sinfónica de la provincia de Corrientes, nos invita a conocer el lado más humano detrás de su impresionante trayectoria. Más allá de su extenso currículum y su formación internacional, Fusco se define como una 'apasionada' por los proyectos que conectan a la música con la gente. A través de un diálogo personal, la maestra comparte su visión de la música como un agente de cambio y bienestar, y cómo su experiencia en el exterior la motivó a aplicar ideas innovadoras en su tierra natal. También explica cómo ha impulsado a la orquesta sinfónica a salir de los escenarios tradicionales para encontrarse con el público en hospitales, geriátricos y escuelas, creando una nueva conexión con la comunidad. Una entrevista que demuestra que la música sinfónica puede ser accesible, inclusiva y un verdadero motor de transformación social.",
+      imagen: "assets/images/eduardo_ledesma_pregunta.png",
+      enlace: "https://youtu.be/-HoMSDWZtOM?si=Lh-7ObR0vMH0ZFak"
+    },
+    {
+      titulo: "En Agendalo TV. Mujer y música: La trayectoria de la directora Andrea Fusco",
+      fecha: "",
+      tipo: "entrevista",
+      resumen: "En el marco del Día de la Mujer, la orquesta sinfónica de la provincia de Corrientes fue invitada al programa 'Agéndalo' para conversar con su directora, Andrea Fusco. En este emotivo diálogo, Fusco recorre su camino profesional, desde sus inicios como guitarrista hasta convertirse en una figura destacada de la dirección orquestal en la región. Durante la entrevista, se abordan temas como el rol de la mujer en la música clásica, la importancia del estudio y la perseverancia, y el compromiso de la orquesta con la comunidad correntina. La maestra enfatiza la pasión que la ha guiado a lo largo de su carrera y el trabajo continuo para acercar la música a nuevos públicos. Un relato inspirador sobre talento, dedicación y el valor de los sueños cumplidos.",
+      imagen: "assets/images/agendalotv_entrevista.png",
+      enlace: "https://youtu.be/8fSluvQkzIQ?si=hoNNtHRTDhWeLH5v"
+    },
+    {
+      titulo: "Andrea Fusco en TEDx Ciudad de Corrientes",
+      fecha: "2013-09-13",
+      tipo: "charla",
+      resumen: "Andrea Fusco participó como oradora en el TEDx Ciudad de Corrientes, realizado en la Universidad de la Cuenca del Plata. En su charla, compartió una reflexión sobre el valor del canto colectivo como herramienta de encuentro y construcción artística: “Cantar con otro da confianza, fortalece la autoestima y genera vínculos que trascienden la música. La música va más allá de cualquier frontera.” El evento reunió a once expositores y artistas locales en una jornada que celebró la creatividad, la cooperación y el espíritu de comunidad.",
+      imagen: "assets/images/TEDxCorrientes.jpg",
+      enlace: "notas/charlatdx.html"
     },
     {
       titulo: "Andrea Fusco representa a Corrientes en la Orquesta Infantil Argentina",
@@ -167,7 +209,7 @@
     });
   }
 
-  function mostrarNotas() {
+  /*function mostrarNotas() {
     const notasFiltradas = ordenarNotas(filtrarNotas());
     const totalPaginas = Math.ceil(notasFiltradas.length / notasPorPagina);
     const inicio = (paginaActual - 1) * notasPorPagina;
@@ -193,7 +235,44 @@
       btn.onclick = () => { paginaActual = i; mostrarNotas(); };
       paginacion.appendChild(btn);
     }
+  }*/
+
+function mostrarNotas() {
+  const notasFiltradas = ordenarNotas(filtrarNotas());
+  const totalPaginas = Math.ceil(notasFiltradas.length / notasPorPagina);
+  const inicio = (paginaActual - 1) * notasPorPagina;
+  const pagNotas = notasFiltradas.slice(inicio, inicio + notasPorPagina);
+
+  contenedorNotas.innerHTML = pagNotas.map(nota => `
+    <article class="bg-white rounded-lg shadow-md overflow-hidden transform transition-transform duration-300 hover:scale-105 w-full flex flex-col md:flex-row">
+      <!-- Imagen a la izquierda -->
+      <div class="w-full md:w-1/3 h-48 md:h-auto overflow-hidden">
+        <img src="${nota.imagen}" alt="${nota.titulo}" class="w-full h-full object-cover">
+      </div>
+      <!-- Contenido -->
+      <div class="p-6 w-full md:w-2/3 flex flex-col justify-between">
+        <div>
+          <h3 class="text-2xl font-bold text-blue-800 mb-2">${nota.titulo}</h3>
+          <p class="text-gray-500 text-sm mb-2">${nota.fecha}</p>
+          <p class="text-gray-700 text-base mb-4">${nota.resumen}</p>
+        </div>
+        <a href="${nota.enlace}" class="text-blue-600 hover:underline font-medium mt-auto">Ver más →</a>
+      </div>
+    </article>
+  `).join("");
+
+  // Paginación
+  paginacion.innerHTML = "";
+  for (let i = 1; i <= totalPaginas; i++) {
+    const btn = document.createElement("button");
+    btn.textContent = i;
+    btn.className = `px-4 py-2 rounded ${
+      i === paginaActual ? 'bg-blue-600 text-white' : 'bg-white border text-blue-600'
+    }`;
+    btn.onclick = () => { paginaActual = i; mostrarNotas(); };
+    paginacion.appendChild(btn);
   }
+}
 
   // Inicializar
   cargarAniosUnicos();

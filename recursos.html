@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" href="assets/images/logo.png" type="image/png" />
   <title>Recursos Musicales - Andrea Fusco</title>
   <link rel="icon" href="assets/images/logo.png" type="image/png" />
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
@@ -277,11 +276,73 @@
           <li><a href="assets/recursos/REPERTORIO_OFICIAL/Instituto-Superior-de-Musica-del-Prof-Gamon/Violoncello.pdf" target="_blank" class="recurso-link">» Canción al Instituto Superior de Música del Prof Gamón » Violoncello</a></li>
         </ul>  
         
-        </ul>
+      </div>
+      
+      <!-- Tarjeta 4: Repertorio Oficial -->
+      <div class="recurso-card group" onclick="toggleLista('programa-concierto')">
+        <h3 class="recurso-title"> 📄 Programas de Conciertos</h3>
+        <ul id="programas-conciertos" class="recurso-lista hidden">
+          
+        </ul>  
+        
+      </div>
+  </main>
+
+    <!-- Separador -->
+      <div class="relative h-1">
+          <div class="absolute inset-0 bg-gradient-to-r from-transparent via-blue-500 to-transparent opacity-70"></div>
+      </div>
+      
+  <!-- Sección: Artículos Publicados -->
+<section id="articulos-publicados" class="py-16 bg-[#f0f6ff] text-gray-800">
+  <div class="max-w-6xl mx-auto px-6">
+    <h2 class="text-3xl font-bold text-blue-900 mb-8 text-center">Artículos Publicados</h2>
+    <p class="text-lg text-gray-700 text-center max-w-3xl mx-auto mb-12">
+      Publicaciones académicas y artículos de investigación de la <strong>Dra. Andrea Fusco </strong> en revistas científicas y especializadas.
+    </p>
+
+    <!-- Contenedor de tarjetas -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <!-- Tarjeta 1 -->
+      <div class="bg-white shadow-md rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300 flex flex-col">
+        <img src="assets/images/revista-antec.jpg" alt="Revista ANTEC Vol 8 N°1" class="h-48 w-full object-cover">
+        <div class="p-6 flex flex-col flex-grow">
+          <h3 class="text-xl font-semibold text-blue-900 mb-2">
+            Publicación en Revista ANTEC Vol 8 N°1 - <br> <span class="italic">Bases del Nacionalismo Musical en la Argentina - Segunda Parte</span>
+          </h3>
+          <p class="text-sm text-gray-500 mb-2">Junio de 2024</p>
+          <p class="text-gray-700 mb-4 flex-grow">
+            En esta segunda parte se abordan analíticamente obras orquestales representativas de cada grupo, estudiando cómo los compositores integraron, o no, elementos del nacionalismo y de la música orquestal de la época.
+          </p>
+          <a href="https://www.researchgate.net/publication/383163920_Bases_del_nacionalismo_musical_en_la_Argentina_2da_parte" target="_blank" class="text-blue-700 font-semibold hover:underline mt-auto">
+            Leer artículo
+          </a>
+        </div>
       </div>
 
+      <!-- Tarjeta 2 -->
+      <div class="bg-white shadow-md rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300 flex flex-col">
+        <img src="assets/images/revista-antec.jpg" alt="Revista ANTEC Vol 7 N°2" class="h-48 w-full object-cover">
+        <div class="p-6 flex flex-col flex-grow">
+          <h3 class="text-xl font-semibold text-blue-900 mb-2">
+            Publicación en Revista ANTEC Vol 7 N°2 - <br> <span class="italic">Bases del Nacionalismo Musical en la Argentina</span>
+          </h3>
+          <p class="text-sm text-gray-500 mb-2">Diciembre de 2023</p>
+          <p class="text-gray-700 mb-4 flex-grow">
+            Basado en las investigaciones realizadas para el doctorado, este artículo es una introducción al estudio aplicado a la música orquestal argentina entre fines del siglo XIX y la primera mitad del XX.
+          </p>
+          <a href="https://www.researchgate.net/publication/377907577_Bases_del_nacionalismo_musical_en_la_Argentina" target="_blank" class="text-blue-700 font-semibold hover:underline mt-auto">
+            Leer artículo
+          </a>
+        </div>
+      </div>
+
+      <!-- (Podés agregar más tarjetas con el mismo formato) -->
+      
     </div>
-  </main>
+  </div>
+</section>
 
   <!-- FOOTER dinámico -->
   <div id="footer-placeholder"></div>
