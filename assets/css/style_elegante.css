@@ -478,10 +478,17 @@ header .logo-af {
 /*-------------------------------------------------------*/
 /*                        FOOTER                         */
 /*-------------------------------------------------------*/
+
+footer {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+}
+
 .footer-link {
   color: #9ca3af;
   text-decoration: none;
   transition: color 0.3s ease;
+  font-weight: 500;
 }
 
 .footer-link:hover {
