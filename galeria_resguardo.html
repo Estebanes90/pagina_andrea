@@ -172,7 +172,7 @@
         <br>
         <h6 class="text-lg font-bold text-blue-600 mb-2">📍 Homenaje Día de la Música: Concierto Sinfónico Coral en el Teatro Vera </h6>
         <!-- Grid adaptable a pantallas pequeñas, medianas y grandes -->
-        <div id="galeria-concierto-sinfonico" class="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3">  </div>
+        <div id="galeria-concierto-sinfonico" class="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3"></div>
      <!-- Separador -->
         <br>
         <div class="relative h-1">
@@ -434,49 +434,5 @@
       generarGaleria("galeria-noche-swing", "assets/images/Noche_de_Swing", "Swing", 31, "Swing");
       generarGaleria("galeria-coro-unne", "assets/images/corounne", "coro", 6, "CORO UNNE");
     </script>
-
-<!-- SCRIPT AUTOMATICO PARA ACTIVAR FANCYBOX EN TODOS LOS ALBUMES -->
-<script>
-$(document).ready(function(){
-
-    // Detectar todas las secciones que contienen imágenes
-    $("section").each(function(){
-
-        var sectionId = $(this).attr("id") || "galeria-general";
-
-        $(this).find("img").each(function(){
-
-            // Evitar duplicar enlaces
-            if($(this).parent("a[data-fancybox]").length) return;
-
-            // Evitar interferir con Instagram
-            if($(this).closest(".instagram-media").length) return;
-
-            var src = $(this).attr("src");
-            if(!src) return;
-
-            $(this).wrap('<a href="'+src+'" data-fancybox="'+sectionId+'"></a>');
-
-        });
-
-    });
-
-    // Configuración Fancybox
-    $("[data-fancybox]").fancybox({
-        loop:true,
-        buttons:[
-            "zoom",
-            "slideShow",
-            "fullScreen",
-            "thumbs",
-            "close"
-        ],
-        animationEffect:"zoom",
-        transitionEffect:"slide"
-    });
-
-});
-</script>
-
 </body>
 </html>
